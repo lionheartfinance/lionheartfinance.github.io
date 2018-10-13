@@ -29,6 +29,7 @@ h1, h2, .navbar-brand {
   background: #EBECE4;
   color: #0B0B0C;
   text-align: left;
+  min-height: calc(100vh - 3.5rem);
 }
 
 .btn {
