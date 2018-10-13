@@ -90,3 +90,13 @@ input {
   border: 3px solid #EBECE4;
   color: #0B0B0C;
 }
+
+@media screen and (min-width: 768px) {
+  .stick-up {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #fff;
+  margin-top: -100px;
+}
+}
