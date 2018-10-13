@@ -15,9 +15,17 @@ body {
   font-family: 'TT Norms Medium';
   src: url("tt_norms_medium.otf") format("opentype");
   }
+@font-face {
+  font-family: 'Maax';
+  src: url("Maax-Medium.ttf") format("truetype");
+  }
+
+.title {
+  font-family: 'Integral', sans-serif !important;
+}
 
 h1, h2, .navbar-brand {
-  font-family: 'Verona Regular', serif !important;
+  font-family: 'TT Norms Medium', sans-serif !important;
   letter-spacing: 0.5px !important;
 }
 
@@ -26,18 +34,18 @@ h1, h2, .navbar-brand {
 }
 
 .jumbotron {
-  background: #EBECE4;
-  color: #0B0B0C;
+  background: #FCFAF2;
+  color: #1D201F;
   text-align: left;
   min-height: calc(100vh - 3.5rem);
 }
 
 .btn {
-  font-family: 'TT Norms Medium';
+  font-family: 'Maax', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
-  border-radius: 0px;
+  border-radius: 2px;
   border: 3px solid #24305E;
 }
 
@@ -46,59 +54,56 @@ input {
 }
 
 .btn-primary {
-  background: #AAAA67;
-  border: 3px solid #0B0B0C;
-  border-radius: 0px;
-  color: #0B0B0C;
-  box-shadow: 5px 5px #0B0B0C5B;
+  background: #88bdbc;
+  border: 3px solid #1D201F;
+  border-radius: 2px;
+  color: #1D201F;
+  box-shadow: 5px 5px #1D201F5B;
   min-width: 200px;
 }
 
 .btn-primary:hover {
-  background: #AAAA67;
-  border: 3px solid #0B0B0C;
-  border-radius: 0px;
-  color: #0B0B0C;
-  box-shadow: 0px 0px #0B0B0C5B;
+  background: #88bdbc;
+  border: 3px solid #1D201F;
+  border-radius: 2px;
+  color: #1D201F;
+  box-shadow: 0px 0px #1D201F5B;
 }
 
 .btn-secondary {
-  background: #EBECE4;
-  color: #0B0B0C;
-  border: 3px solid #0B0B0C;
-  box-shadow: 5px 5px #0B0B0C5B;
+  background: #f8f6e5;
+  color: #1D201F;
+  border: 3px solid #1D201F;
+  box-shadow: 5px 5px #1D201F5B;
+  border-radius: 2px;
 }
 .btn-secondary:hover {
-  background: #EBECE4;
-  border: 3px solid #0B0B0C;
-  border-radius: 0px;
-  color: #0B0B0C;
-  box-shadow: 0px 0px #0B0B0C5B;
+  background: #f8f6e5;
+  border: 3px solid #1D201F;
+  color: #1D201F;
+  box-shadow: 0px 0px #1D201F5B;
+  border-radius: 2px;
 }
 
 .navbar {
-  background: #0B0B0C !important;
+  background: #112d32 !important;
 }
 
 .register {
-  padding: 7px 15px 7px 15px !important;
-  border: 3px solid #AAAA67;
-  background: none;
-  color: #AAAA67 !important;
-  text-transform: uppercase;
-  font-family: 'TT Norms Medium' !important;
-  letter-spacing: 2px !important;
-  font-size: 14px !important;
+  padding: 10px 20px 10px 20px !important;
+  border: 3px solid #88bdbc;
+  background: #88bdbc;
+  color: #0B0B0C !important;
+  font-family: 'TT Norms' !important;
+  border-radius: 2px;
 }
 
 .register:hover {
-  background: #AAAA67;
-  border: 3px solid #AAAA67;
-  color: #0B0B0C !important;
-  text-transform: uppercase;
-  font-family: 'TT Norms Medium' !important;
-  letter-spacing: 2px !important;
-  font-size: 14px !important;
+  background: #88bdbc;
+  border: 3px solid #88bdbc;
+  color: #1D201F !important;
+  font-family: 'TT Norms' !important;
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 768px) {
@@ -112,6 +117,8 @@ input {
 }
 
 .nav-item {
+  font-family: 'Maax', sans-serif !important;
+  line-height: 15px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -128,7 +135,7 @@ input {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #0B0B0C;
+  background-color: #112d32;
   overflow-y: hidden;
   transition: 0.5s;
   z-index: 9999;
@@ -155,7 +162,7 @@ input {
 }
 
 .overlay a:hover, .overlay a:focus, .overlay a:active {
-  color: #AAAA67 !important;
+  color: #88bdbc !important;
 }
 
 .close {
@@ -174,7 +181,7 @@ input {
   top: 50%;
   left: 0;
   margin-top: -1px;
-  background: #fffaf0;
+  background: #D1DEDE;
 }
 .close::before {
   -webkit-transform: rotate(45deg);
@@ -211,11 +218,44 @@ input {
 }
 
 .login {
-  text-transform: uppercase;
-  font-family: 'TT Norms Medium' !important;
-  letter-spacing: 2px !important;
-  font-size: 14px !important;
-  color: #EBECE4 !important;
-  margin-top: 5px;
-  opacity: 0.5 !important;
+  padding: 10px 20px 10px 20px !important;
+  border: 3px solid #ffffff;
+  background: none;
+  color: #ffffff;
+  font-family: 'TT Norms' !important;
+  border-radius: 2px;
+}
+
+.login:hover {
+  border-color: #cfcfcf !important;
+  color: #cfcfcf !important;
+}
+
+.graph {
+  margin-top: 0px;
+  font-size: 14px;
+  height: 40vh;
+  width: 100%;
+}
+.graph svg {
+  overflow: visible;
+}
+.domain {
+  display: none;
+}
+.tick {
+  shape-rendering: "crispEdges";
+  stroke: #fff;
+  stroke-width: 1px;
+}
+.graph-val {
+  text-anchor: end;
+}
+.line {
+  fill: none;
+  stroke-width: 5px;
+  vector-effect: non-scaling-stroke;
+}
+.area {
+  vector-effect: non-scaling-stroke;
 }
