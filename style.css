@@ -80,15 +80,25 @@ input {
   background: #0B0B0C !important;
 }
 
-.btn-outline-success {
-  border: 3px solid #EBECE4;
-  color: #EBECE4;
+.register {
+  padding: 7px 15px 7px 15px !important;
+  border: 3px solid #AAAA67;
+  background: none;
+  color: #AAAA67 !important;
+  text-transform: uppercase;
+  font-family: 'TT Norms Medium' !important;
+  letter-spacing: 2px !important;
+  font-size: 14px !important;
 }
 
-.btn-outline-success:hover {
-  background: #EBECE4;
-  border: 3px solid #EBECE4;
-  color: #0B0B0C;
+.register:hover {
+  background: #AAAA67;
+  border: 3px solid #AAAA67;
+  color: #0B0B0C !important;
+  text-transform: uppercase;
+  font-family: 'TT Norms Medium' !important;
+  letter-spacing: 2px !important;
+  font-size: 14px !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -99,4 +109,128 @@ input {
   background: #fff;
   margin-top: -100px;
 }
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+.mobile-menu {
+  visibility: visible !important;
+  z-index: 9999;
+}
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0B0B0C;
+  overflow-y: hidden;
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  z-index: 9999;
+}
+
+.overlay a {
+  font-family: 'TT Norms Medium', serif !important;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 2.2em;
+  display: block;
+  transition: 0.3s;
+  z-index: 9999;
+  color: #EBECE4
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #fffaf0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+.close::before, .close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #fffaf0;
+}
+.close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.close.hairline::before, .close.hairline::after {
+  height: 1px;
+}
+
+@media screen and (max-height: 450px) {
+.overlay {overflow-y: auto;}
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+  font-family: 'TT Norms', 'Avenir', Helvetica, sans-serif;
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+}
+}
+}
+
+.navbar-toggler {
+  display: none !important;
+}
+
+.login {
+  text-transform: uppercase;
+  font-family: 'TT Norms Medium' !important;
+  letter-spacing: 2px !important;
+  font-size: 14px !important;
+  color: #EBECE4;
+  margin-top: 5px;
+}
+
+.stroke {
+  color: transparent !important;
+  -moz-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.5px;
+  -moz-text-stroke-color: #EBECE4;
+  -webkit-text-stroke-color: #EBECE4;
+}
+
+.stroke:hover, .stroke:focus, .stroke:active {
+  color: #EBECE4 !important;
+  -moz-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.5px;
+  -moz-text-stroke-color: #EBECE4;
+  -webkit-text-stroke-color: #EBECE4;
 }

@@ -23,6 +23,28 @@
 
   <body>
 
+    <div class="mobile-menu" style="visibility: hidden;">
+      <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="close hairline" onclick="closeNav()"></a>
+          <div class="overlay-content">
+            <a class="stroke" href="#about" onclick="closeNav()">Home</a>
+            <a class="stroke" href="#about" onclick="closeNav()">Solutions</a>
+            <a class="stroke" href="#projects" onclick="closeNav()">How it Works</a>
+            <a class="stroke" href="#services" onclick="closeNav()">Pricing</a>
+            <center><div style="margin-top: 30px;cursor: pointer;width: 70% !important;"class="register" href="#contact" onclick="closeNav()">Register</div></center>
+            <a class="login" href="#contact" onclick="closeNav()">Login</a>
+          </div>
+        </div>
+
+      <span style="z-index: 4000; background: none;height: 5px; width: 20px;position: fixed; top: 20px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px;position: fixed; top: 25px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: none;height: 4px; width: 20px;position: fixed; top: 26px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px; position: fixed; top: 30px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: none;height: 4px; width: 20px;position: fixed; top: 31px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px; position: fixed; top: 35px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: none;height: 5px; width: 20px;position: fixed; top: 36px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+    </div>
+
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#" style="letter-spacing: 0.5px !important;">Lionheart</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,24 +52,29 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto navbar-left">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Solutions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">How it Works</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Pricing</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a style="color: #EBECE4;" class="nav-link" href="#">Login</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link register" href="#">Register</a>
+          </li>
+        </ul>
+        <div style="clear:both;"></div>
       </div>
     </nav>
 
@@ -104,5 +131,14 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
   </body>
 </html>
