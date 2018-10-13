@@ -86,7 +86,7 @@ input {
 }
 
 .navbar {
-  background: #112d32 !important;
+  background: #889698 !important;
 }
 
 .register {
@@ -135,7 +135,7 @@ input {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #112d32;
+  background-color: #889698;
   overflow-y: hidden;
   transition: 0.5s;
   z-index: 9999;
