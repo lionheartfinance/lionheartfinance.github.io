@@ -34,7 +34,7 @@ h1, h2, .navbar-brand {
 }
 
 .jumbotron {
-  background: #FCFAF2;
+  background: #f4f7f7;
   color: #1D201F;
   text-align: left;
   min-height: calc(100vh - 3.5rem);
@@ -54,7 +54,7 @@ input {
 }
 
 .btn-primary {
-  background: #88bdbc;
+  background: #FFFFBF;
   border: 3px solid #1D201F;
   border-radius: 2px;
   color: #1D201F;
@@ -63,7 +63,7 @@ input {
 }
 
 .btn-primary:hover {
-  background: #88bdbc;
+  background: #FFFFBF;
   border: 3px solid #1D201F;
   border-radius: 2px;
   color: #1D201F;
@@ -71,14 +71,14 @@ input {
 }
 
 .btn-secondary {
-  background: #f8f6e5;
+  background: #f4f7f7;
   color: #1D201F;
   border: 3px solid #1D201F;
   box-shadow: 5px 5px #1D201F5B;
   border-radius: 2px;
 }
 .btn-secondary:hover {
-  background: #f8f6e5;
+  background: #f4f7f7;
   border: 3px solid #1D201F;
   color: #1D201F;
   box-shadow: 0px 0px #1D201F5B;
@@ -91,16 +91,16 @@ input {
 
 .register {
   padding: 10px 20px 10px 20px !important;
-  border: 3px solid #88bdbc;
-  background: #88bdbc;
+  border: 3px solid #FFFFBF;
+  background: #FFFFBF;
   color: #0B0B0C !important;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
 }
 
 .register:hover {
-  background: #88bdbc;
-  border: 3px solid #88bdbc;
+  background: #ffff99;
+  border: 3px solid #ffff99;
   color: #1D201F !important;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
@@ -162,7 +162,7 @@ input {
 }
 
 .overlay a:hover, .overlay a:focus, .overlay a:active {
-  color: #88bdbc !important;
+  color: #FFFFBF !important;
 }
 
 .close {
