@@ -28,13 +28,13 @@
           <div id="myNav" class="overlay">
               <a href="javascript:void(0)" class="close hairline" onclick="closeNav()"></a>
               <div class="overlay-content">
-                <a href="#about" onclick="closeNav()">Home</a>
-                <a href="#about" onclick="closeNav()">Offerings</a>
-                <a href="#projects" onclick="closeNav()">How it Works</a>
-                <a href="#services" onclick="closeNav()">Pricing</a>
-                <center><div style="margin-top: 30px;cursor: pointer;width: 70% !important;" class="register" href="register.html" onclick="closeNav()">Invest Now</div></center>
-                <center><div style="margin-top: 10px;cursor: pointer;width: 70% !important;" class="login" href="signin.html" onclick="closeNav()">Sign In</div></center>
-              </div>
+                  <a href="index.html">Home</a>
+                  <a href="offerings.html">Offerings</a>
+                  <a href="how.html">How it Works</a>
+                  <a href="pricing.html">Pricing</a>
+                  <center><a href="register.html"><div style="font-size: 0.5em;margin-top: 30px;cursor: pointer;width: 70% !important;" class="register">Invest Now</div></a></center>
+                  <center><a href="signin.html" onclick="closeNav()"><div style="font-size: 0.5em;margin-top: 10px;cursor: pointer;width: 70% !important;" class="login">Sign In</div></a></center>
+                </div>
             </div>
     
           <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 18px; right: 25px;cursor:pointer" onclick="openNav()"></span>
@@ -91,5 +91,14 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2018, Lionheart Finance.</p>
     </form>
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
   </body>
 </html>
