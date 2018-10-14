@@ -33,10 +33,13 @@ h1, h2, .navbar-brand {
 }
 
 .jumbotron {
-  background: #f4f7f7;
-  color: #1D201F;
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #0b8793, #210931);
+  background: linear-gradient(to top, #0b8793, #210931); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #f4f7f7;
   text-align: left;
   min-height: calc(100vh - 3.5rem);
+  border-radius: 0px !important;
 }
 
 .btn {
@@ -49,24 +52,25 @@ h1, h2, .navbar-brand {
 }
 
 input {
-  border-radius: 0px !important;
+  border-radius: 2px !important;
+  border: 3px solid #1D201F !important;
 }
 
 .btn-primary {
-  background: #FFFFBF;
-  border: 3px solid #1D201F;
+  background: #FBA16C;
+  border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #1D201F;
-  box-shadow: 5px 5px #1D201F5B;
+  color: #f4f7f7;
+  box-shadow: 5px 5px #ffffff5b;
   min-width: 200px;
 }
 
 .btn-primary:hover {
-  background: #FFFFBF;
-  border: 3px solid #1D201F;
+  background: #FBA16C;
+  border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #1D201F;
-  box-shadow: 0px 0px #1D201F5B;
+  color: #f4f7f7;
+  box-shadow: 0px 0px #ffffff5b;
 }
 
 .btn-secondary {
@@ -85,22 +89,22 @@ input {
 }
 
 .navbar {
-  background: #889698 !important;
+  background: #210931 !important;
 }
 
 .register {
   padding: 10px 20px 10px 20px !important;
-  border: 3px solid #FFFFBF;
-  background: #FFFFBF;
-  color: #0B0B0C !important;
+  border: 3px solid #FBA16C;
+  background: #FBA16C;
+  color: #f4f7f7 !important;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
 }
 
 .register:hover {
-  background: #ffff99;
-  border: 3px solid #ffff99;
-  color: #1D201F !important;
+  background: #da8555;
+  border: 3px solid #da8555;
+  color: #f4f7f7 !important;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
 }
@@ -134,7 +138,7 @@ input {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #889698;
+  background-color: #210931;
   overflow-y: hidden;
   transition: 0.5s;
   z-index: 9999;
@@ -157,11 +161,11 @@ input {
   display: block;
   transition: 0.3s;
   z-index: 9999;
-  color: #EBECE4;
+  color: #f4f7f7;
 }
 
 .overlay a:hover, .overlay a:focus, .overlay a:active {
-  color: #FFFFBF !important;
+  color: #FBA16C !important;
 }
 
 .close {
@@ -180,7 +184,7 @@ input {
   top: 50%;
   left: 0;
   margin-top: -1px;
-  background: #D1DEDE;
+  background: #f4f7f7;
 }
 .close::before {
   -webkit-transform: rotate(45deg);
@@ -218,9 +222,9 @@ input {
 
 .login {
   padding: 10px 20px 10px 20px !important;
-  border: 3px solid #ffffff;
+  border: 3px solid #f4f7f7;
   background: none;
-  color: #ffffff;
+  color: #f4f7f7;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
 }
@@ -237,15 +241,10 @@ input {
   width: 100%;
 }
 .graph svg {
-  overflow: visible;
+  overflow: hidden;
 }
 .domain {
   display: none;
-}
-.tick {
-  shape-rendering: "crispEdges";
-  stroke: #fff;
-  stroke-width: 1px;
 }
 .graph-val {
   text-anchor: end;
@@ -257,4 +256,8 @@ input {
 }
 .area {
   vector-effect: non-scaling-stroke;
+}
+
+.text-muted {
+  color: #f4f7f75b !important;
 }

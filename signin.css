@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 3.5rem;
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #0b8793, #210931);
+  background: linear-gradient(to top, #0b8793, #210931);
+  min-height: calc(100vh - 3.5rem);
+}
+
+h1 {
+  color: #f4f7f7 !important;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px 15px 15px 15px;
+  margin: 0 auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+input {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  cursor: text !important;
+}
+
+.text-muted {
+  color: #f4f7f75b !important;
+}
