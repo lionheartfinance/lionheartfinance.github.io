@@ -49,7 +49,7 @@ input {
   background: #FBA16C;
   border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #f4f7f7;
+  color: #210931;
   box-shadow: 5px 5px #ffffff5b;
   min-width: 200px;
 }
@@ -58,20 +58,20 @@ input {
   background: #FBA16C;
   border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #f4f7f7;
+  color: #210931;
   box-shadow: 0px 0px #ffffff5b;
 }
 
 .secondary {
   background: #f4f7f7;
-  color: #1D201F;
+  color: #210931;
   border: 3px solid #f4f7f7;
   border-radius: 2px;
 }
 .secondary:hover {
   background: #d9dbdb;
   border: 3px solid #d9dbdb;
-  color: #1D201F;
+  color: #210931;
   border-radius: 2px;
 }
 
@@ -195,4 +195,9 @@ input {
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
   background-color: #0b889313 !important;
+}
+
+.undertitle {
+  width: 100%;
+  border: 0.5px solid #FBA16C5b;
 }

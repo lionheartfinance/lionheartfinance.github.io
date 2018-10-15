@@ -60,7 +60,7 @@ input {
   background: #FBA16C;
   border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #f4f7f7;
+  color: #210931;
   box-shadow: 5px 5px #ffffff5b;
   min-width: 200px;
 }
@@ -69,7 +69,7 @@ input {
   background: #FBA16C;
   border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #f4f7f7;
+  color: #210931;
   box-shadow: 0px 0px #ffffff5b;
 }
 
@@ -96,7 +96,7 @@ input {
   padding: 10px 20px 10px 20px !important;
   border: 3px solid #FBA16C;
   background: #FBA16C;
-  color: #f4f7f7 !important;
+  color: #210931 !important;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
 }
@@ -104,7 +104,7 @@ input {
 .register:hover {
   background: #da8555;
   border: 3px solid #da8555;
-  color: #f4f7f7 !important;
+  color: #210931 !important;
   font-family: 'TT Norms' !important;
   border-radius: 2px;
 }
@@ -121,7 +121,7 @@ input {
 
 .nav-item {
   font-family: 'Maax', sans-serif !important;
-  line-height: 15px;
+  line-height: 20px;
   margin-left: 10px;
   margin-right: 10px;
 }
