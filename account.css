@@ -96,6 +96,23 @@ input {
   border-radius: 2px;
 }
 
+.signout {
+  padding: 0px 15px 0px 15px !important;
+  border: 3px solid #0b8793;
+  background: #0b8793;
+  color: #f4f7f7 !important;
+  font-family: 'TT Norms' !important;
+  border-radius: 2px;
+}
+
+.signout:hover {
+  background: #086770;
+  border: 3px solid #086770;
+  color: #f4f7f7 !important;
+  font-family: 'TT Norms' !important;
+  border-radius: 2px;
+}
+
 .nav-item {
   font-family: 'Maax', sans-serif !important;
   line-height: 15px;
