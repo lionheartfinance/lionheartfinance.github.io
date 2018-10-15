@@ -24,6 +24,10 @@ body {
   font-family: 'Integral', sans-serif !important;
 }
 
+.navbar-brand {
+  font-size: 1.25em !important;
+}
+
 h1, h2, .navbar-brand {
   font-family: 'TT Norms Medium', sans-serif !important;
 }
