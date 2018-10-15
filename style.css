@@ -261,3 +261,8 @@ input {
 .text-muted {
   color: #f4f7f75b !important;
 }
+
+.sections {
+  margin-left: 5%;
+  margin-right: 5%;
+}
