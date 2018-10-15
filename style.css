@@ -234,30 +234,6 @@ input {
   color: #cfcfcf !important;
 }
 
-.graph {
-  margin-top: 0px;
-  font-size: 14px;
-  height: 40vh;
-  width: 100%;
-}
-.graph svg {
-  overflow: hidden;
-}
-.domain {
-  display: none;
-}
-.graph-val {
-  text-anchor: end;
-}
-.line {
-  fill: none;
-  stroke-width: 5px;
-  vector-effect: non-scaling-stroke;
-}
-.area {
-  vector-effect: non-scaling-stroke;
-}
-
 .text-muted {
   color: #f4f7f75b !important;
 }
