@@ -25,7 +25,7 @@ body {
   }
   @font-face {
     font-family: 'HK Regular';
-    src: url("HKGrotesk-Regular.otf") format("opentype");
+    src: url("Proxima Nova.otf") format("opentype");
     }
 
 .title {
@@ -45,7 +45,7 @@ h1, h2, .navbar-brand {
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1.05em;
 }
 
 .jumbotron {
@@ -172,10 +172,10 @@ input {
 }
 
 .overlay a {
-  font-family: 'Helvetica Neue Medium', sans-serif !important;
+  font-family: 'HK Bold', sans-serif !important;
   padding: 4px;
   text-decoration: none;
-  font-size: 2.2em;
+  font-size: 2.0em;
   display: block;
   transition: 0.3s;
   z-index: 9999;
