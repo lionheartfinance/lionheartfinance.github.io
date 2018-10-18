@@ -24,7 +24,7 @@ body {
   src: url("HKGrotesk-Bold.otf") format("opentype");
   }
   @font-face {
-    font-family: 'HK Regular';
+    font-family: 'Proxima Nova';
     src: url("Proxima Nova.otf") format("opentype");
     }
 
@@ -41,7 +41,7 @@ h1, h2, .navbar-brand {
 }
 
 * {
-  font-family: 'HK Regular', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 p {
@@ -49,7 +49,7 @@ p {
 }
 
 .jumbotron {
-  background: #360033;  /* fallback for old browsers */
+  background: #2b0e3d;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #0b8793, #2b0e3d);
   background: linear-gradient(to top, #0b8793, #2b0e3d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #f4f7f7;
@@ -64,7 +64,7 @@ p {
   letter-spacing: 2px;
   font-size: 15px;
   border-radius: 2px;
-  border: 3px solid #24305E;
+  border: 3px solid #2b0e3d;
 }
 
 input {
@@ -76,7 +76,7 @@ input {
   background: #FBA16C;
   border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #210931;
+  color: #2b0e3d;
   box-shadow: 5px 5px #ffffff5b;
   min-width: 200px;
   font-family: 'HK Bold', sans-serif !important;
@@ -86,23 +86,23 @@ input {
   background: #FBA16C;
   border: 3px solid #FBA16C;
   border-radius: 2px;
-  color: #210931;
+  color: #2b0e3d;
   box-shadow: 0px 0px #ffffff5b;
   font-family: 'HK Bold', sans-serif !important;
 }
 
 .btn-secondary {
   background: #f4f7f7;
-  color: #1D201F;
-  border: 3px solid #1D201F;
-  box-shadow: 5px 5px #1D201F5B;
+  color: #2b0e3d;
+  border: 3px solid #2b0e3d;
+  box-shadow: 5px 5px #2b0e3d5B;
   border-radius: 2px;
 }
 .btn-secondary:hover {
   background: #f4f7f7;
-  border: 3px solid #1D201F;
-  color: #1D201F;
-  box-shadow: 0px 0px #1D201F5B;
+  border: 3px solid #2b0e3d;
+  color: #2b0e3d;
+  box-shadow: 0px 0px #2b0e3d5B;
   border-radius: 2px;
 }
 
@@ -114,7 +114,7 @@ input {
   padding: 10px 20px 10px 20px !important;
   border: 3px solid #FBA16C;
   background: #FBA16C;
-  color: #210931 !important;
+  color: #2b0e3d !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
 }
@@ -122,7 +122,7 @@ input {
 .register:hover {
   background: #da8555;
   border: 3px solid #da8555;
-  color: #210931 !important;
+  color: #2b0e3d !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
 }
@@ -138,7 +138,7 @@ input {
 }
 
 .nav-item {
-  font-family: 'HK Regular', sans-serif !important;
+  font-family: 'Proxima Nova', sans-serif !important;
   margin-left: 10px;
   margin-right: 10px;
   font-size: 18px;
@@ -156,7 +156,7 @@ input {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #210931;
+  background-color: #2b0e3d;
   overflow-y: hidden;
   transition: 0.5s;
   z-index: 9999;
