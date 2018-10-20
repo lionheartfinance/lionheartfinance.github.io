@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Lionheart Finance</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" ></script>
+    <style>
+    .sections {
+        margin: 2% 2% 2% 2%;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="mobile-menu" style="display: none;">
+      <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="close hairline" onclick="closeNav()"></a>
+          <div class="overlay-content">
+              <a href="index.html" onclick="closeNav()">Home</a>
+              <a href="offerings.html">Offerings</a>
+              <a href="how.html">How it Works</a>
+              <a href="pricing.html">Pricing</a>
+              <center><a href="register.html"><div style="font-size: 0.4em !important;margin-top: 30px;cursor: pointer;width: 70% !important;" class="btn register">Invest Now</div></a></center>
+              <center><a href="signin.html"><div style="font-size: 0.4em !important;margin-top: 0px;cursor: pointer;width: 70% !important;" class="btn login">Sign In</div></a></center>
+            </div>
+        </div>
+
+      <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 18px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px; position: fixed; top: 24px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 25px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px; position: fixed; top: 31px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+      <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 32px; right: 25px;cursor:pointer" onclick="openNav()"></span>    
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="index.html" style="color:#ffffff;letter-spacing: 0.5px !important;">Lionheart</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto navbar-left">
+          <li class="nav-item">
+            <a style="color: #ffffff !important;" class="nav-link" href="#">Offerings</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #ffffff !important;" class="nav-link" href="#">How it Works</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #ffffff !important;"class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a style="color: #ffffff !important;" class="nav-link login btn btn-glitch" href="signin.html">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link register btn btn-glitch" href="register.html">Invest Now</a>
+          </li>
+        </ul>
+        <div style="clear:both;"></div>
+      </div>
+    </nav>
+
+    <main role="main" class="ajax">
+        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+          <defs>
+              <filter id="filter">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+                  <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+              </filter>
+          </defs>
+      </svg>
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div style="text-align: center; background: #2b0e3d !important;" class="jumbotron">
+        <div style="margin-top: 25vh !important; margin-bottom: 25vh !important;" class="sections">
+          <h1 id="english" data-text="High-stakes investment monitoring." class="display-5" style="font-size: 3.6em;line-height: 1em;margin-top: 8%;">How does options trading work?</h1>
+          <!--<h1 id="japanese" data-text="ライオンハート" class="display-5" style="margin-top: 3%;font-weight: 600;">ライオンハート</h1>-->
+          <h4 class="mb-3 home-description" style="padding-left: 5%; padding-right: 5%;font-size: 1.65em;">A simple guide to help you understand the basics of high-stakes investment.</h4>
+          <span class="scroll-indicator">
+            <span class="scroll-indicator__line"></span>
+            Scroll
+        </span>
+        </div>
+      </div>
+      <div style="background: #fba06c3d; min-height: 100%;" class="sections">
+        <!-- Example row of columns -->
+        <div style="text-align: center;padding-left: 8%; padding-right: 8%;" class="row">
+          <div class="mt-5 mb-5 col-md-12">
+            <h2 class="mb-3" style="font-size: 2.15em;">First Topic</h2>
+                <div class="row">
+                    <div class="col-md-12 mb-2">
+                        <h4 style="padding-left: 5%; padding-right: 5%;font-size: 1.65em;" class="home-description">Description text goes here.</h4>
+                    </div>
+                </div>
+            <div class="mt-3" style="color: #2b0e3d;background: #f4f7f7;  padding: 20px; width: 100%; min-height: 40vh; display: table;">
+                <div style="display: table-cell; vertical-align: middle; text-align: center;">
+                    Test Graphic
+                </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div style="background: #f4f7f7; min-height: 100%;" class="sections">
+            <!-- Example row of columns -->
+            <div style="padding-left: 8%; padding-right: 8%;" class="row">
+              <div class="mt-5 mb-5 col-md-12">
+                <h2 style="text-align: center;font-size: 2.15em;">Something that's important can go here. Or some bullshit guarantee that we offer.</h2> 
+              </div>
+            </div>
+          </div>
+      <div style="text-align: center;background:#2b0e3d27; min-height: 100%;" class="sections">
+            <!-- Example row of columns -->
+            <div style="padding-left: 8%; padding-right: 8%;" class="row">
+              <div class="mt-5 mb-5 col-md-12">
+                <h2 class="mb-3" style="font-size: 2.15em;">Second Topic</h2>
+                    <div class="row">
+                        <div class="col-md-12 mb-2">
+                            <h4 style="padding-left: 5%; padding-right: 5%;font-size: 1.65em;" class="home-description">Description text goes here.</h4>
+                        </div>
+                    </div>
+                <div class="mt-3" style="color: #2b0e3d;background: #f4f7f7; padding: 20px; width: 100%; min-height: 40vh; display: table;">
+                    <div style="display: table-cell; vertical-align: middle; text-align: center;">
+                        Test Graphic
+                    </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+
+    </main>
+    <hr style="border: none;">
+    <footer style="margin-right: 10em; margin-left: 10em;" class="sections">
+      <p>&copy; 2018, Lionheart Finance.</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+        $(".scroll-indicator").css("opacity", 1 - $(window).scrollTop() / 550);
+        });
+    </script>
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+    <!-- <script>
+        $(function() {
+        // setTimeout() function will be fired after page is loaded
+        // it will wait for 5 sec. and then will fire
+        // $("#successMessage").hide() function
+        setTimeout(function() {
+            $("#japanese").hide({}, 1200)
+        }, 1200);
+    });
+    </script>
+    <script>
+        $(function() {
+        // setTimeout() function will be fired after page is loaded
+        // it will wait for 5 sec. and then will fire
+        // $("#successMessage").hide() function
+        setTimeout(function() {
+            $("#english").show({}, 1200)
+        }, 1200);
+    });
+    </script> -->
+    <!--<script>
+    // Glitch Timeline Function
+var $text = document.querySelector('.btn-glitch-active'),
+    $filter = document.querySelector('.svg-sprite'),
+    $turb = $filter.querySelector('#filter feTurbulence'),
+    turbVal = { val: 0.000001 },
+    turbValX = { val: 0.000001 };
+
+var glitchTimeline = function() {
+    var timeline = new TimelineMax({
+        repeat: -1,
+        repeatDelay: 2,
+        paused: true,
+        onUpdate: function () {
+            $turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
+        }
+    });
+
+    timeline
+        .to(turbValX, 0.1, { val: 0.5 })
+        .to(turbVal, 0.1, { val: 0.02 });
+    timeline
+        .set(turbValX, { val: 0.000001 })
+        .set(turbVal, { val: 0.000001 });
+    timeline
+        .to(turbValX, 0.2, { val: 0.4 }, 0.4)
+        .to(turbVal, 0.2, { val: 0.002 }, 0.4);
+    timeline
+        .set(turbValX, { val: 0.000001 })
+        .set(turbVal, { val: 0.000001 });
+
+    // console.log("duration is: " + timeline.duration());
+
+    return {
+        start: function() {
+            timeline.play(0);
+        },
+        stop: function() {
+            timeline.pause();
+        }
+    };
+};
+
+btnGlitch = new glitchTimeline();
+
+$('.btn-glitch')
+    .on('mouseenter', function () {
+          $(this).addClass('btn-glitch-active');
+          btnGlitch.start();
+    })
+    .on('mouseleave', function () {
+        var $this = $(this);
+        if ( $this.hasClass('btn-glitch-active') ) {
+            $this.removeClass('btn-glitch-active');
+            btnGlitch.stop();
+        }
+    });
+    </script>-->
+  </body>
+</html>

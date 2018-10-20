@@ -4,8 +4,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Verona Regular';
-  src: url("Verona-Regular.ttf") format("truetype");
+  font-family: 'HK Bold Italic';
+  src: url("HKGrotesk-BoldItalic.otf") format("opentype");
   }
 @font-face {
   font-family: 'TT Norms';
@@ -16,8 +16,8 @@ body {
   src: url("tt_norms_medium.otf") format("opentype");
   }
 @font-face {
-  font-family: 'Maax';
-  src: url("Maax-Medium.ttf") format("truetype");
+  font-family: 'HK Regular';
+  src: url("HKGrotesk-Regular.otf") format("opentype");
   }
 @font-face {
   font-family: 'HK Bold';
@@ -36,7 +36,7 @@ body {
   font-size: 1.5em !important;
 }
 
-h1, h2, .navbar-brand {
+h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-family: 'HK Bold', sans-serif !important;
 }
 
@@ -54,7 +54,7 @@ p {
   background: linear-gradient(to top, #0b8793, #2b0e3d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #f4f7f7;
   text-align: left;
-  min-height: calc(100vh - 3.5rem);
+  height: calc(100vh - 3.5rem);
   border-radius: 0px !important;
 }
 
@@ -256,14 +256,10 @@ input {
   color: #f4f7f75b !important;
 }
 
-.sections {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
 @media screen and (min-width: 768px) {
 .home-description {
   padding-right: 25%;
+  font-family: 'Proxima Nova', sans-serif !important;
 }
 }
 
@@ -297,6 +293,10 @@ input {
 
 body {
   margin: 0;
+}
+
+.sections {
+  margin: 2% 5% 2% 5%;
 }
 
 .body-section {
@@ -347,4 +347,40 @@ body {
   23%, 100% {
     background-color: transparent;
   }
+}
+
+.scroll-indicator {
+  font-family: 'Proxima Nova', sans-serif;
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.scroll-indicator__line {
+  position: absolute;
+  left: 0 !important;
+  top: 0;
+  right: 0 !important;
+  display: block;
+  width: 1px;
+  height: 35px;
+  background-color: #ffffff;
+  margin: auto;
+  content: '';
+}
+
+.bold-it {
+  font-family: 'HK Bold Italic', sans-serif !important;
+}
+
+.num-steps {
+  font-family: 'HK Regular'
 }
