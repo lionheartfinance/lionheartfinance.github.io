@@ -36,7 +36,7 @@ body {
   font-size: 1.5em !important;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar-brand {
+h1, h2, h3, .navbar-brand {
   font-family: 'HK Bold', sans-serif;
 }
 
@@ -383,4 +383,21 @@ body {
 
 .num-steps {
   font-family: 'HK Regular'
+}
+
+.left-head {
+  padding-right: 5%;
+  padding-right: 5%;
+}
+
+.right-head {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+::selection {
+  background: #9bd8dd; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #9bd8dd; /* Gecko Browsers */
 }
