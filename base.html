@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+        <head>
+          {% block head %}
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta name="description" content="">
+                <meta name="author" content="">
+                <link rel="icon" href="../../../../favicon.ico">
+            
+                {% if title %}
+                <title>{{ title }} | Lionheart Finance</title>
+                  {% else %}
+                  <title>Lionheart Finance</title>
+                {% endif %}
+            
+                <!-- Bootstrap core CSS -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            
+                <!-- Custom styles for this template -->
+                <link href="account.css" rel="stylesheet" type="text/css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
+                <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+
+                <!-- Start of Async Drift Code -->
+                <script>
+                        "use strict";
+                        
+                        !function() {
+                        var t = window.driftt = window.drift = window.driftt || [];
+                        if (!t.init) {
+                            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+                            t.factory = function(e) {
+                            return function() {
+                                var n = Array.prototype.slice.call(arguments);
+                                return n.unshift(e), t.push(n), t;
+                            };
+                            }, t.methods.forEach(function(e) {
+                            t[e] = t.factory(e);
+                            }), t.load = function(t) {
+                            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                            var i = document.getElementsByTagName("script")[0];
+                            i.parentNode.insertBefore(o, i);
+                            };
+                        }
+                        }();
+                        drift.SNIPPET_VERSION = '0.3.1';
+                        drift.load('8skkhcz2uraf');
+                </script>
+                <!-- End of Async Drift Code -->
+                <script>
+                        (function() {
+                          /* Add this class to any elements you want to use to open Drift.
+                           *
+                           * Examples:
+                           * - <a class="drift-open-chat">Questions? We're here to help!</a>
+                           * - <button class="drift-open-chat">Chat now!</button>
+                           *
+                           * You can have any additional classes on those elements that you
+                           * would ilke.
+                           */
+                          var DRIFT_CHAT_SELECTOR = '.drift-open-chat'
+                          /* http://youmightnotneedjquery.com/#ready */
+                          function ready(fn) {
+                            if (document.readyState != 'loading') {
+                              fn();
+                            } else if (document.addEventListener) {
+                              document.addEventListener('DOMContentLoaded', fn);
+                            } else {
+                              document.attachEvent('onreadystatechange', function() {
+                                if (document.readyState != 'loading')
+                                  fn();
+                              });
+                            }
+                          }
+                          /* http://youmightnotneedjquery.com/#each */
+                          function forEachElement(selector, fn) {
+                            var elements = document.querySelectorAll(selector);
+                            for (var i = 0; i < elements.length; i++)
+                              fn(elements[i], i);
+                          }
+                          function openSidebar(driftApi, event) {
+                            event.preventDefault();
+                            driftApi.sidebar.open();
+                            return false;
+                          }
+                          ready(function() {
+                            drift.on('ready', function(api) {
+                              var handleClick = openSidebar.bind(this, api)
+                              forEachElement(DRIFT_CHAT_SELECTOR, function(el) {
+                                el.addEventListener('click', handleClick);
+                              });
+                            });
+                          });
+                        })();
+                </script>
+                <script>
+                    drift.on("ready", api => {
+                        api.widget.hide()
+                    })
+                </script>
+                {% endblock %}
+              </head>
+
+  <body>
+    <nav style="background: #2b0e3d !important;" class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html">Lionheart</a>
+      <ul style="background: #2b0e3d !important;" class="navbar-nav px-3">
+        <li class="nav-item">
+            <a style="display: inline-block" class="nav-link drift-open-chat" href="">Live Support</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="display: inline-block" class="nav-link" href=""><span data-feather="log-out"></span> Sign out</a>
+        </li>  
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+            <li class="nav-item">
+            <h5 class="nav-link mt-2">
+              Welcome, {% if user %}{{ user.username }}{% endif %}!
+            </h5>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="home"></span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="clipboard"></span>
+                  Assets
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="trending-up"></span>
+                  Trends
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-bag"></span>
+                  Orders
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Reports
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Saved reports</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Current month
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Last quarter
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Social engagement
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Year-end sale
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Account</span>
+            </h6>
+            <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <span data-feather="settings"></span>
+                    Settings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <span data-feather="user"></span>
+                Profile
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <span data-feather="credit-card"></span>
+                Billing
+                </a>
+            </li>
+            </ul>
+          </div>
+        </nav>
+
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>
