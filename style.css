@@ -1,6 +1,7 @@
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
   padding-top: 3.5rem;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -30,7 +31,7 @@ body {
 
 .navbar-brand {
   font-size: 1.5em !important;
-  color: #45423E !important;
+  color: #1C2227 !important;
 }
 
 h1, h2, h3, .navbar-brand {
@@ -71,7 +72,7 @@ input {
   background: #4998c5;
   border: 3px solid #4998c5;
   border-radius: 2px;
-  color: #f8f5ef;
+  color: #f4f7f7;
   box-shadow: 0px 0px #1C22275b;
   min-width: 200px;
   font-family: 'HK Bold', sans-serif !important;
@@ -81,7 +82,7 @@ input {
   background: #3c81a8;
   border: 3px solid #3c81a8;
   border-radius: 2px;
-  color: #f8f5ef;
+  color: #f4f7f7;
   box-shadow: 0px 0px #ffffff5b;
   font-family: 'HK Bold', sans-serif !important;
 }
@@ -100,7 +101,7 @@ input {
 }
 
 .navbar {
-  color: #45423E !important;
+  color: #1C2227 !important;
 }
 
 .register {
@@ -161,7 +162,7 @@ input {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #8a7a94;
+  background-color: #f4f7f7;
   overflow-y: hidden;
   transition: 0.5s;
   z-index: 9999;
@@ -169,7 +170,7 @@ input {
 
 .overlay-content {
   position: relative;
-  top: 21%;
+  top: 12%;
   width: 100%;
   text-align: center;
   margin-top: 0px;
@@ -184,11 +185,11 @@ input {
   display: block;
   transition: 0.3s;
   z-index: 9999;
-  color: #f8f5ef;
+  color: #4998c5;
 }
 
 .overlay a:hover, .overlay a:focus, .overlay a:active {
-  color: #FBA16C !important;
+  color: #3c81a8 !important;
 }
 
 .close {
@@ -207,7 +208,7 @@ input {
   top: 50%;
   left: 0;
   margin-top: -1px;
-  background: #f8f5ef;
+  background: #1C2227;
 }
 .close::before {
   -webkit-transform: rotate(45deg);
@@ -245,9 +246,9 @@ input {
 
 .login {
   padding: 10px 20px 10px 20px !important;
-  border: 3px solid #45423E;
+  border: 3px solid #1C2227;
   background: none;
-  color: #45423E !important;
+  color: #1C2227 !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
