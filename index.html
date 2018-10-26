@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="style-light.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
@@ -45,7 +45,7 @@
       <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 32px; right: 25px;cursor:pointer" onclick="openNav()"></span>    
     </div>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav id="navbar" class="navbar navbar-expand-md fixed-top">
       <a class="navbar-brand" href="index.html" style="letter-spacing: 0.5px !important;">Lionheart</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -83,7 +83,7 @@
           <h4 class="mb-3 home-description" style="font-size: 1.65em;">Allow our algorithms to allocate your portfolio depending on pre-established risk tolerance. We focus on options, shorts, and packaged investment products.</h4>
           <p><a style="z-index: 9999;" class="btn btn-primary btn-lg" href="register.html">Invest Now</a></p>
         </div>
-        <div id="particles-js"></div>
+        <canvas id="canvas"></canvas>
       </div>
       <div style="margin: 2% 5% 2% 5% !important;" class="sections">
         <!-- Example row of columns -->
@@ -137,111 +137,150 @@
         }
     </script>
     <script>
-     // ParticlesJS Config.
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 80,
-      "density": {
-        "enable": true,
-        "value_area": 700 } },
+        $(document).ready(function(){
+          $(window).scroll(function() { // check if scroll event happened
+            if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+              $(".navbar").css("background-color", "#f4f7f7"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+            } else {
+              $(".navbar").css("background-color", "transparent"); // if not, change it back to transparent
+            }
+          });
+        });
+    </script>
+    <script>
+    let w, h;
+		const OPTIONS = {
+			speed: null,
+			color: '#f3d1c9',
+			radius: 4,
+			lineWidth: 0.5,
+			distance: 110,
+		}
 
+		String.prototype.toRGB = function(){
+		    let color = this.toLowerCase();
+		    let reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+		    console.log(color, reg.test(color))
+		    if (color && reg.test(color)) {
+		        if (color.length === 4) {
+		            let colorNew = "#";
+		            for (let i=1; i<4; i+=1) {
+		                colorNew += color.slice(i, i+1).concat(color.slice(i, i+1));
+		            }
+		            color = colorNew;
+		        }
+		        let colorChange = [];
+		        for (let i=1; i<7; i+=2) {
+		            colorChange.push(parseInt("0x"+color.slice(i, i+2)));
+		        }
+		        return "RGBA(" + colorChange.join(",") + ", 1)";
+		    }else{
+		    	return null
+		    }
+		    return color;
+		};
 
-    "color": {
-      "value": "#e9ac9d" },
+		OPTIONS.color = OPTIONS.color.toRGB();
 
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#e9ac9d" },
+		class Circle{
+			constructor(ctx){
+				this.ctx = ctx;
+				this.x = Math.random()*w;
+				this.y = Math.random()*h;
+				this.speed = OPTIONS.speed || 0.55;
+				this.color = OPTIONS.color ? OPTIONS.color : `rgba(200, 200, 200, 1)`;
+				this.radius = Math.floor(Math.random()*OPTIONS.radius) || Math.floor(Math.random()*2);
+				this.vector = {
+					x: Math.cos(Math.floor(Math.random()*360))*this.speed,
+					y: Math.sin(Math.floor(Math.random()*360))*this.speed
+				};
+			}
 
-      "polygon": {
-        "nb_sides": 5 } },
+			rule(){
+				if (this.x >= w || this.x <= 0){
+					this.vector.x *= -1;
+				}
 
+				if (this.y >= h || this.y <= 0) {
+					this.vector.y *= -1;
+				}
 
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false } },
+				if (this.x > w) { this.x = w }
+				if (this.x < 0) { this.x = 0 }
+				if (this.y > h) { this.y = h }
+				if (this.y < 0) { this.y = 0 }
+			}
 
+			draw(){
+				this.ctx.save();
+				this.ctx.beginPath();
+				this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+				this.ctx.fillStyle = this.color;
+				this.ctx.fill();
+				this.ctx.closePath();
+				this.ctx.restore();
+			}
 
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false } },
+			update(){
+				this.rule();
+				this.x += this.vector.x;
+				this.y += this.vector.y;
+			}
+		}
 
+		let link = (circle, circles, ctx) => {
+			for (let i = 0; i < circles.length; i++) {
+				let distancex = Math.abs(circles[i].x - circle.x);
+				let distancey = Math.abs(circles[i].y - circle.y);
+				let distance = Math.sqrt(Math.pow(distancex, 2) + Math.pow(distancey, 2));
+				if (distance <= Math.floor((OPTIONS.distance/1920)*window.innerWidth)) {
+					ctx.lineWidth = OPTIONS.lineWidth || 0.5;
+					ctx.strokeStyle = OPTIONS.color ? OPTIONS.color.replace(/\, 1\)/, `, ${1-distance/Math.floor((250/1920)*window.innerWidth)})`)
+						: `rgba(200, 200, 200, ${1-distance/Math.floor((250/1920)*window.innerWidth)})`;
+					ctx.beginPath();
+					ctx.moveTo(circle.x, circle.y);
+					ctx.lineTo(circles[i].x, circles[i].y);
+					ctx.closePath();
+					ctx.stroke();
+				}
+			}
+		}
 
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#e9ac9d",
-      "opacity": 0.4,
-      "width": 1 },
+		let initStage = (target) => {
+			const canvas = document.querySelector(target);
+			if (!canvas) {
+				console.error('请输入正确的canvas');
+				return ;
+			}
+			const ctx = canvas.getContext('2d');
+			w = canvas.width = window.innerWidth;
+			h = canvas.height = window.innerHeight;
+			let circles = [];
+			let drawCircle = new Circle();
+			for(let i = 0; i < 100; i++){
+				circles.push(new Circle(ctx))
+			}
 
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200 } } },
+			(function run(){
+				ctx.clearRect(0,0,w,h);
+				circles.forEach(item => {
+					item.draw();
+					item.update();
+				})
 
+				circles.forEach(item => {
+					link(item, circles, ctx);
+				})
+				window.requestAnimationFrame(run);
+			})()
+		}
 
+		window.addEventListener('resize', ()=>{
+			w = canvas.width = window.innerWidth;
+			h = canvas.height = window.innerHeight;
+		})
 
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab" },
-
-      "onclick": {
-        "enable": true,
-        "mode": "push" },
-
-      "resize": true },
-
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1 } },
-
-
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3 },
-
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4 },
-
-      "push": {
-        "particles_nb": 4 },
-
-      "remove": {
-        "particles_nb": 2 } } },
-
-
-
-  "retina_detect": true });
+		initStage('#canvas');
     </script>
     <!-- <script>
         $(function() {
