@@ -15,11 +15,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style-light.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" ></script>
+    <script src="https://cldup.com/S6Ptkwu_qA.js" ></script>
   </head>
 
   <body>
@@ -45,7 +46,7 @@
     </div>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="index.html" style="color:#ffffff;letter-spacing: 0.5px !important;">Lionheart</a>
+      <a class="navbar-brand" href="index.html" style="letter-spacing: 0.5px !important;">Lionheart</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,21 +54,21 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto navbar-left">
           <li class="nav-item">
-            <a style="color: #ffffff !important;" class="nav-link" href="#">Offerings</a>
+            <a class="nav-link" href="#">Offerings</a>
           </li>
           <li class="nav-item">
-            <a style="color: #ffffff !important;" class="nav-link" href="how.html">How it Works</a>
+            <a class="nav-link" href="how.html">How it Works</a>
           </li>
           <li class="nav-item">
-            <a style="color: #ffffff !important;"class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Pricing</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a style="color: #ffffff !important;" class="nav-link login btn btn-glitch" href="signin.html">Sign In</a>
+            <a class="nav-link login btn" href="signin.html">Sign In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link register btn btn-glitch" href="register.html">Invest Now</a>
+            <a style="color:#F4F2ED !important;" class="nav-link register btn" href="register.html">Invest Now</a>
           </li>
         </ul>
         <div style="clear:both;"></div>
@@ -75,22 +76,14 @@
     </nav>
 
     <main role="main" class="ajax">
-        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
-          <defs>
-              <filter id="filter">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
-                  <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
-              </filter>
-          </defs>
-      </svg>
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <div style="margin: 2% 5% 2% 5% !important;" class="sections">
+        <div style="z-index: 9999 !important; margin: 2% 5% 2% 5% !important;" class="sections">
           <h1 id="english" data-text="High-stakes investment monitoring." class="display-5" style="font-size: 3.6em;line-height: 1em;margin-top: 3%;">High-stakes investment monitoring.</h1>
-          <!--<h1 id="japanese" data-text="ライオンハート" class="display-5" style="margin-top: 3%;font-weight: 600;">ライオンハート</h1>-->
           <h4 class="mb-3 home-description" style="font-size: 1.65em;">Allow our algorithms to allocate your portfolio depending on pre-established risk tolerance. We focus on options, shorts, and packaged investment products.</h4>
-          <p><a style="z-index: 9999;" class="btn btn-primary btn-lg btn-glitch" href="register.html">Invest Now</a></p>
+          <p><a style="z-index: 9999;" class="btn btn-primary btn-lg" href="register.html">Invest Now</a></p>
         </div>
+        <div id="particles-js"></div>
       </div>
       <div style="margin: 2% 5% 2% 5% !important;" class="sections">
         <!-- Example row of columns -->
@@ -142,6 +135,113 @@
         function closeNav() {
           document.getElementById("myNav").style.height = "0%";
         }
+    </script>
+    <script>
+     // ParticlesJS Config.
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 700 } },
+
+
+    "color": {
+      "value": "#e9ac9d" },
+
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#e9ac9d" },
+
+      "polygon": {
+        "nb_sides": 5 } },
+
+
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false } },
+
+
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false } },
+
+
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#e9ac9d",
+      "opacity": 0.4,
+      "width": 1 },
+
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200 } } },
+
+
+
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab" },
+
+      "onclick": {
+        "enable": true,
+        "mode": "push" },
+
+      "resize": true },
+
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1 } },
+
+
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3 },
+
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4 },
+
+      "push": {
+        "particles_nb": 4 },
+
+      "remove": {
+        "particles_nb": 2 } } },
+
+
+
+  "retina_detect": true });
     </script>
     <!-- <script>
         $(function() {
