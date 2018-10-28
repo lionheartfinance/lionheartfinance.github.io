@@ -78,7 +78,7 @@
     <canvas id="canvas"></canvas>
     <form class="form-signin">
       <div class="text-center mb-4">
-        <h1 style="font-size: 2.5em;" class="mb-3 font-weight-normal">Sign Up to Start Investing</h1>
+        <h1 style="font-size: 2.5em;" class="mb-3 font-weight-normal">Sign Up to Invest</h1>
       </div>
 
       <div class="form-label-group">
@@ -86,16 +86,22 @@
       </div>
 
       <div class="form-label-group">
-            <input type="text" id="inputUser" class="form-control" placeholder="Choose a Username" required>
-          </div>
+            <input onchange="addText()" type="text" id="inputUser" class="form-control" placeholder="Choose a Username" required>
+      </div>
 
       <div class="form-label-group">
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
       </div>
 
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Invest Now</button>
+      <button id="form-button" class="btn btn-lg btn-primary btn-block" type="submit">Invest Now</button>
       <p class="mt-5 mb-3 text-muted text-center"><small>&copy; 2018, Lionheart Finance.</small></p>
     </form>
+    <script type="text/javascript">
+      function addText() {
+          var input = document.getElementById('inputUser');
+          input.value = '@' + input.value;
+      }
+  </script>
     <script>
             function openNav() {
               document.getElementById("myNav").style.height = "100%";
