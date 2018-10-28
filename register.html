@@ -93,7 +93,7 @@
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
       </div>
 
-      <button id="form-button" class="btn btn-lg btn-primary btn-block" type="submit">Invest Now</button>
+      <button id="form-button" class="btn btn-lg btn-primary btn-block" type="submit" disabled="disabled">Invest Now</button>
       <p class="mt-5 mb-3 text-muted text-center"><small>&copy; 2018, Lionheart Finance.</small></p>
     </form>
     <script type="text/javascript">
@@ -256,6 +256,19 @@
                 }
               });
             });
+        </script>
+        <script>
+          $('#inputEmail, #inputUser, #inputPassword').bind('keyup', function() {
+          if(allFilled()) $('#form-button').removeAttr('disabled');
+          });
+
+          function allFilled() {
+              var filled = true;
+              $('body input').each(function() {
+                  if($(this).val() == '') filled = false;
+              });
+              return filled;
+          }
         </script>
   </body>
 </html>

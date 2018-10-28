@@ -1,21 +1,7 @@
-html,
 body {
-  height: 100%;
-}
-
-body {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  min-height: calc(100vh - 3.5rem);
-  overflow-x: hidden;
-}
+    padding-top: 3.5rem;
+    overflow-x: hidden;
+  }
 
 @font-face {
   font-family: 'HK Bold Italic';
@@ -64,7 +50,7 @@ input {
 
 .navbar-brand {
   font-size: 1.5em !important;
-  color: #1C2227 !important;
+  color: #f4f7f7 !important;
 }
 
 h1, h2, h3, .navbar-brand {
@@ -81,7 +67,7 @@ p {
 
 .jumbotron {
   background: none;
-  color: #1C2227;
+  color: #f4f7f7;
   text-align: left;
   height: calc(100vh - 3.5rem);
   border-radius: 0px !important;
@@ -176,11 +162,11 @@ input {
   margin-right: 10px;
   margin-top: 6px;
   font-size: 15px;
-  color: #45423E !important;
+  color: #f4f7f7 !important;
 }
 
 .nav-item a:hover{
-  color: #686764 !important;
+  color: #d9dada !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -279,17 +265,17 @@ input {
 
 .login {
   padding: 10px 20px 10px 20px !important;
-  border: 3px solid #1C2227;
+  border: 3px solid #f4f7f7;
   background: none;
-  color: #1C2227 !important;
+  color: #f4f7f7 !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
 }
 
 .login:hover {
-  border-color: #686764 !important;
-  color: #686764 !important;
+  border-color: #d9dada !important;
+  color: #d9dada !important;
 }
 
 .text-muted {
@@ -402,7 +388,7 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #45423E;
+  color: #f4f7f7;
 }
 .scroll-indicator__line {
   position: absolute;
@@ -412,7 +398,7 @@ body {
   display: block;
   width: 1px;
   height: 35px;
-  background-color: #45423E;
+  background-color: #f4f7f7;
   margin: auto;
   content: '';
 }
@@ -447,7 +433,7 @@ canvas{
   position: absolute;
     top: 0;
     left: 0;
-    background: #f4f7f7;
+    background: #1C2227;
 }
 
 button:disabled {
