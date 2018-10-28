@@ -16,10 +16,11 @@
 
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" ></script>
+    <script src="https://cldup.com/S6Ptkwu_qA.js" ></script>
   </head>
 
   <body>
@@ -37,12 +38,12 @@
                 </div>
             </div>
     
-          <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 18px; right: 25px;cursor:pointer" onclick="openNav()"></span>
-          <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px; position: fixed; top: 24px; right: 25px;cursor:pointer" onclick="openNav()"></span>
-          <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 25px; right: 25px;cursor:pointer" onclick="openNav()"></span>
-          <span style="z-index: 4000; background: #EBECE4;height: 1px; width: 20px; position: fixed; top: 31px; right: 25px;cursor:pointer" onclick="openNav()"></span>
-          <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 32px; right: 25px;cursor:pointer" onclick="openNav()"></span>    
-        </div>
+            <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 18px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+            <span style="z-index: 4000; background: #45423E;height: 1px; width: 20px; position: fixed; top: 24px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+            <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 25px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+            <span style="z-index: 4000; background: #45423E;height: 1px; width: 20px; position: fixed; top: 31px; right: 25px;cursor:pointer" onclick="openNav()"></span>
+            <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 32px; right: 25px;cursor:pointer" onclick="openNav()"></span>    
+          </div>
     
         <nav style="background-color: transparent !important;" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <a class="navbar-brand" href="index.html" style="color:#ffffff;letter-spacing: 0.5px !important;">Lionheart</a>
@@ -53,27 +54,28 @@
           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto navbar-left">
               <li class="nav-item">
-                <a style="color: #ffffff !important;" class="nav-link" href="#">Offerings</a>
+                <a class="nav-link" href="#">Offerings</a>
               </li>
               <li class="nav-item">
-                <a style="color: #ffffff !important;" class="nav-link" href="how.html">How it Works</a>
+                <a class="nav-link" href="how.html">How it Works</a>
               </li>
               <li class="nav-item">
-                <a style="color: #ffffff !important;"class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Pricing</a>
               </li>
             </ul>
             <ul class="navbar-nav navbar-right">
               <li class="nav-item">
-                <a style="color: #ffffff !important;" class="nav-link login btn" href="signin.html">Sign In</a>
+                <a class="nav-link login btn" href="signin.html">Sign In</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link register btn" href="register.html">Invest Now</a>
+                <a style="color:#F4F2ED !important;" class="nav-link register btn" href="register.html">Invest Now</a>
               </li>
             </ul>
             <div style="clear:both;"></div>
           </div>
         </nav>
 
+    <canvas id="canvas"></canvas>
     <form class="form-signin">
       <div class="text-center mb-4">
         <h1 style="font-size: 2.5em;" class="mb-3 font-weight-normal">Sign In</h1>
@@ -99,5 +101,151 @@
           document.getElementById("myNav").style.height = "0%";
         }
     </script>
+    <script>
+        let w, h;
+        const OPTIONS = {
+          speed: null,
+          color: '#f3d1c9',
+          radius: 4,
+          lineWidth: 0.5,
+          distance: 110,
+        }
+    
+        String.prototype.toRGB = function(){
+            let color = this.toLowerCase();
+            let reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+            console.log(color, reg.test(color))
+            if (color && reg.test(color)) {
+                if (color.length === 4) {
+                    let colorNew = "#";
+                    for (let i=1; i<4; i+=1) {
+                        colorNew += color.slice(i, i+1).concat(color.slice(i, i+1));
+                    }
+                    color = colorNew;
+                }
+                let colorChange = [];
+                for (let i=1; i<7; i+=2) {
+                    colorChange.push(parseInt("0x"+color.slice(i, i+2)));
+                }
+                return "RGBA(" + colorChange.join(",") + ", 1)";
+            }else{
+              return null
+            }
+            return color;
+        };
+    
+        OPTIONS.color = OPTIONS.color.toRGB();
+    
+        class Circle{
+          constructor(ctx){
+            this.ctx = ctx;
+            this.x = Math.random()*w;
+            this.y = Math.random()*h;
+            this.speed = OPTIONS.speed || 0.55;
+            this.color = OPTIONS.color ? OPTIONS.color : `rgba(200, 200, 200, 1)`;
+            this.radius = Math.floor(Math.random()*OPTIONS.radius) || Math.floor(Math.random()*2);
+            this.vector = {
+              x: Math.cos(Math.floor(Math.random()*360))*this.speed,
+              y: Math.sin(Math.floor(Math.random()*360))*this.speed
+            };
+          }
+    
+          rule(){
+            if (this.x >= w || this.x <= 0){
+              this.vector.x *= -1;
+            }
+    
+            if (this.y >= h || this.y <= 0) {
+              this.vector.y *= -1;
+            }
+    
+            if (this.x > w) { this.x = w }
+            if (this.x < 0) { this.x = 0 }
+            if (this.y > h) { this.y = h }
+            if (this.y < 0) { this.y = 0 }
+          }
+    
+          draw(){
+            this.ctx.save();
+            this.ctx.beginPath();
+            this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+            this.ctx.fillStyle = this.color;
+            this.ctx.fill();
+            this.ctx.closePath();
+            this.ctx.restore();
+          }
+    
+          update(){
+            this.rule();
+            this.x += this.vector.x;
+            this.y += this.vector.y;
+          }
+        }
+    
+        let link = (circle, circles, ctx) => {
+          for (let i = 0; i < circles.length; i++) {
+            let distancex = Math.abs(circles[i].x - circle.x);
+            let distancey = Math.abs(circles[i].y - circle.y);
+            let distance = Math.sqrt(Math.pow(distancex, 2) + Math.pow(distancey, 2));
+            if (distance <= Math.floor((OPTIONS.distance/1920)*window.innerWidth)) {
+              ctx.lineWidth = OPTIONS.lineWidth || 0.5;
+              ctx.strokeStyle = OPTIONS.color ? OPTIONS.color.replace(/\, 1\)/, `, ${1-distance/Math.floor((250/1920)*window.innerWidth)})`)
+                : `rgba(200, 200, 200, ${1-distance/Math.floor((250/1920)*window.innerWidth)})`;
+              ctx.beginPath();
+              ctx.moveTo(circle.x, circle.y);
+              ctx.lineTo(circles[i].x, circles[i].y);
+              ctx.closePath();
+              ctx.stroke();
+            }
+          }
+        }
+    
+        let initStage = (target) => {
+          const canvas = document.querySelector(target);
+          if (!canvas) {
+            console.error('请输入正确的canvas');
+            return ;
+          }
+          const ctx = canvas.getContext('2d');
+          w = canvas.width = window.innerWidth;
+          h = canvas.height = window.innerHeight;
+          let circles = [];
+          let drawCircle = new Circle();
+          for(let i = 0; i < 100; i++){
+            circles.push(new Circle(ctx))
+          }
+    
+          (function run(){
+            ctx.clearRect(0,0,w,h);
+            circles.forEach(item => {
+              item.draw();
+              item.update();
+            })
+    
+            circles.forEach(item => {
+              link(item, circles, ctx);
+            })
+            window.requestAnimationFrame(run);
+          })()
+        }
+    
+        window.addEventListener('resize', ()=>{
+          w = canvas.width = window.innerWidth;
+          h = canvas.height = window.innerHeight;
+        })
+    
+        initStage('#canvas');
+        </script>
+        <script>
+            $(document).ready(function(){
+              $(window).scroll(function() { // check if scroll event happened
+                if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+                  $(".navbar").css("background-color", "#f4f7f7"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+                } else {
+                  $(".navbar").css("background-color", "transparent"); // if not, change it back to transparent
+                }
+              });
+            });
+        </script>
   </body>
 </html>
