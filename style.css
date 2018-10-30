@@ -61,7 +61,7 @@ p {
   font-size: 15px;
   border-radius: 2px;
   border: 3px solid #8a7a94;
-  padding: 6px 10px 6px 10px !important;
+  line-height: 30px !important;
 }
 
 input {
@@ -105,23 +105,23 @@ input {
   color: #1C2227 !important;
 }
 
-.register {
-  line-height: 30px;
+.btn-success {
+  line-height: 30px !important;
   min-width: 150px !important;
   border: 3px solid #4998c5;
-  background: #4998c5;
+  background: #4998c5 !important;
   color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
-  border-radius: 2px;
+  border-radius: 2px !important;
   font-size: 15px !important;
 }
 
-.register:hover {
-  background: #3c81a8;
-  border: 3px solid #3c81a8;
+.btn-success:hover {
+  background: #3c81a8 !important;
+  border: 3px solid #3c81a8!important;
   color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
-  border-radius: 2px;
+  border-radius: 2px !important;
   font-size: 15px !important;
 }
 
@@ -245,18 +245,18 @@ input {
   display: none !important;
 }
 
-.login {
-  line-height: 30px;
+.btn-dark {
+  line-height: 30px !important;
   min-width: 120px !important;
-  border: 3px solid #1C2227;
-  background: none;
+  border: 3px solid #1C2227 !important;
+  background: none !important;
   color: #1C2227 !important;
   font-family: 'HK Bold', sans-serif !important;
-  border-radius: 2px;
+  border-radius: 2px !important;
   font-size: 15px !important;
 }
 
-.login:hover {
+.btn-dark:hover {
   border-color: #686764 !important;
   color: #686764 !important;
 }
@@ -270,34 +270,6 @@ input {
   padding-right: 25%;
   font-family: 'Proxima Nova', sans-serif !important;
 }
-}
-
-.btn-glitch {
-  transform: translateZ(0);
-  overflow: visible;
-}
-.btn-glitch.btn-glitch-active {
-  -webkit-filter: url("#filter");
-  filter: url("#filter");
-}
-.btn-glitch.btn-glitch-active::after, .btn-glitch.btn-glitch-active::before {
-  content: '';
-  width: 1px;
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-}
-.btn-glitch.btn-glitch-active::after {
-  left: -2px;
-  background-color: #ff536b;
-  animation: colorshift-red 2.6s infinite;
-  animation-timing-function: step-end;
-}
-.btn-glitch.btn-glitch-active::before {
-  right: -2px;
-  background-color: #3ffeff;
-  animation: colorshift-blue 2.6s infinite;
-  animation-timing-function: step-end;
 }
 
 body {
@@ -325,37 +297,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@keyframes colorshift-red {
-  0%, 7% {
-    background-color: #ff536b;
-  }
-  8%, 18% {
-    background-color: transparent;
-  }
-  19% {
-    background-color: #ff536b;
-    width: 2px;
-  }
-  23%, 100% {
-    background-color: transparent;
-  }
-}
-@keyframes colorshift-blue {
-  0%, 7% {
-    background-color: #3ffeff;
-  }
-  8%, 18% {
-    background-color: transparent;
-  }
-  19% {
-    background-color: #3ffeff;
-    width: 2px;
-  }
-  23%, 100% {
-    background-color: transparent;
-  }
 }
 
 .scroll-indicator {
