@@ -75,8 +75,14 @@ input {
   border-radius: 2px;
   color: #f4f7f7;
   box-shadow: 0px 0px #1C22275b;
-  min-width: 200px;
+  min-width: 200px !important;
   font-family: 'HK Bold', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  border-radius: 2px;
+  padding: 13px 20px 13px 20px !important;
+
 }
 
 .btn-primary:hover {
@@ -86,6 +92,7 @@ input {
   color: #f4f7f7;
   box-shadow: 0px 0px #ffffff5b;
   font-family: 'HK Bold', sans-serif !important;
+  text-decoration: none !important;
 }
 
 .btn-secondary {
@@ -106,7 +113,7 @@ input {
 }
 
 .register {
-  padding: 12px 20px 10px 20px !important;
+  padding: 13px 20px 13px 20px !important;
   border: 3px solid #4998c5;
   background: #4998c5;
   color: #f8f5ef !important;
@@ -122,6 +129,7 @@ input {
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
+  text-decoration: none !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -245,7 +253,7 @@ input {
 }
 
 .login {
-  padding: 12px 20px 10px 20px !important;
+  padding: 13px 20px 13px 20px !important;
   border: 3px solid #1C2227;
   background: none;
   color: #1C2227 !important;
@@ -257,6 +265,7 @@ input {
 .login:hover {
   border-color: #686764 !important;
   color: #686764 !important;
+  text-decoration: none !important;
 }
 
 .text-muted {
