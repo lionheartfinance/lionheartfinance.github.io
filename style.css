@@ -70,10 +70,6 @@ input {
 }
 
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  line-height: 50px !important;
-  height: 50px !important;
   background: #4998c5;
   border: 3px solid #4998c5;
   border-radius: 2px;
@@ -84,7 +80,8 @@ input {
   letter-spacing: 2px;
   font-size: 15px;
   border-radius: 2px;
-  padding: 13px 20px 13px 20px !important;
+  min-width: 200px !important;
+  padding: 10px 20px 10px 20px !important;
 }
 
 .btn-primary:hover {
@@ -120,17 +117,13 @@ input {
 }
 
 .register {
-  display: inline-flex;
-  align-items: center;
-  padding: 10% 20px 10% 20px !important;
+  padding: 10px 20px 10px 20px !important;
   border: 3px solid #4998c5;
   background: #4998c5;
   color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
-  line-height: 50px !important;
-  height: 50px !important;
 }
 
 .register:hover {
@@ -264,17 +257,14 @@ input {
 }
 
 .login {
-  display: inline-flex;
-  align-items: center;
-  padding: 13px 20px 13px 20px !important;
+  padding: 10px 20px 10px 20px !important;
   border: 3px solid #1C2227;
   background: none;
   color: #1C2227 !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
-  line-height: 50px !important;
-  height: 50px !important;
+  margin-right: 15px !important;
 }
 
 .login:hover {
