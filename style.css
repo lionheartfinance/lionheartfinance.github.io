@@ -106,7 +106,8 @@ input {
 }
 
 .register {
-  padding: 10px 20px 10px 20px !important;
+  line-height: 30px;
+  min-width: 150px !important;
   border: 3px solid #4998c5;
   background: #4998c5;
   color: #f8f5ef !important;
@@ -245,7 +246,8 @@ input {
 }
 
 .login {
-  padding: 10px 20px 10px 20px !important;
+  line-height: 30px;
+  min-width: 120px !important;
   border: 3px solid #1C2227;
   background: none;
   color: #1C2227 !important;
