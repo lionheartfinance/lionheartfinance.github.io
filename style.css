@@ -70,14 +70,15 @@ input {
 }
 
 .btn-primary {
-  line-height: 35px !important;
-  height: 35px !important;
+  display: inline-flex;
+  align-items: center;
+  line-height: 50px !important;
+  height: 50px !important;
   background: #4998c5;
   border: 3px solid #4998c5;
   border-radius: 2px;
   color: #f4f7f7;
   box-shadow: 0px 0px #1C22275b;
-  min-width: 200px !important;
   font-family: 'HK Bold', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -97,10 +98,15 @@ input {
 }
 
 .btn-secondary {
+  display: inline-flex;
+  align-items: center;
   background: #f4f7f7;
   color: #1C2227;
   border: 3px solid #f4f7f7;
   border-radius: 2px;
+  padding: 13px 20px 13px 20px !important;
+  line-height: 50px !important;
+  height: 50px !important;
 }
 .btn-secondary:hover {
   background: #dfe2e2;
@@ -114,8 +120,8 @@ input {
 }
 
 .register {
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
+  display: inline-flex;
+  align-items: center;
   padding: 13px 20px 13px 20px !important;
   border: 3px solid #4998c5;
   background: #4998c5;
@@ -123,8 +129,8 @@ input {
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
-  line-height: 35px !important;
-  height: 35px !important;
+  line-height: 50px !important;
+  height: 50px !important;
 }
 
 .register:hover {
@@ -258,8 +264,8 @@ input {
 }
 
 .login {
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
+  display: inline-flex;
+  align-items: center;
   padding: 13px 20px 13px 20px !important;
   border: 3px solid #1C2227;
   background: none;
@@ -267,8 +273,8 @@ input {
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
   font-size: 15px !important;
-  line-height: 35px !important;
-  height: 35px !important;
+  line-height: 50px !important;
+  height: 50px !important;
 }
 
 .login:hover {
