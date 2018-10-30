@@ -114,6 +114,8 @@ input {
 }
 
 .register {
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
   padding: 13px 20px 13px 20px !important;
   border: 3px solid #4998c5;
   background: #4998c5;
@@ -256,6 +258,8 @@ input {
 }
 
 .login {
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
   padding: 13px 20px 13px 20px !important;
   border: 3px solid #1C2227;
   background: none;
