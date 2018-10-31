@@ -31,9 +31,10 @@ body {
 
 .navbar-brand {
   font-size: 1.5em !important;
+  color: #1C2227 !important;
 }
 
-h1, h2, h3, .navbar-brand {
+h1, h2, h3, .navbar-brand, h5 {
   font-family: 'HK Bold', sans-serif;
 }
 
@@ -94,7 +95,8 @@ input {
 }
 
 .navbar {
-  background: #2b0e3d !important;
+  background: #f4f7f7 !important;
+  border: none !important;
 }
 
 .register {
