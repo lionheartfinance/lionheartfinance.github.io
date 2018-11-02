@@ -1,6 +1,6 @@
 module.exports =  {
-  demoMode: true,
+  demoMode: false,
   colorScheme: 'light',
-  navPosition: 'sidenav',
+  navPosition: 'combo',
   sidebarColor: 'default'
 }
