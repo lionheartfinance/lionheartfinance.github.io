@@ -131,16 +131,14 @@ input {
   color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
 }
 
 .register:hover {
   background: #3c81a8;
   border: 3px solid #3c81a8;
   color: #f8f5ef !important;
-  font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
+  text-decoration: none !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -157,17 +155,15 @@ input {
 
 .nav-item a{
   font-family: 'HK Bold', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 6px;
-  font-size: 15px;
-  color: #f4f7f7 !important;
+  font-size: 19px;
+  line-height: 19px;
+  color: #f8f5ef !important;
 }
 
 .nav-item a:hover{
-  color: #d9dada !important;
+  color: #dadada !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -266,17 +262,18 @@ input {
 
 .login {
   padding: 10px 20px 10px 20px !important;
-  border: 3px solid #f4f7f7;
+  border: 3px solid #f8f5ef;
   background: none;
-  color: #f4f7f7 !important;
+  color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
+  margin-right: 15px !important;
 }
 
 .login:hover {
-  border-color: #d9dada !important;
-  color: #d9dada !important;
+  border-color: #dadada !important;
+  color: #dadada !important;
+  text-decoration: none !important;
 }
 
 .text-muted {

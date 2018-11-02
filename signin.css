@@ -43,11 +43,14 @@ body {
     }
 
 .form-signin {
+  position: absolute;
+  top: 30vh;
+  bottom: 30vh;
+  left: 0 !important;
+  right: 0 !important;
   width: 100%;
   max-width: 420px;
-  padding: 25px 25px 25px 25px;
   margin: 0 auto;
-  background: #f4f7f7;
   border-radius: 10px;
 }
 
@@ -60,6 +63,8 @@ input {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
   cursor: text !important;
+  min-height: 60px !important;
+  font-size: 1.2em !important;
 }
 
 .navbar-brand {
@@ -82,7 +87,7 @@ p {
 .jumbotron {
   background: none;
   color: #1C2227;
-  text-align: left;
+  text-align: center;
   height: calc(100vh - 3.5rem);
   border-radius: 0px !important;
 }
@@ -145,16 +150,14 @@ input {
   color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
 }
 
 .register:hover {
   background: #3c81a8;
   border: 3px solid #3c81a8;
   color: #f8f5ef !important;
-  font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
+  text-decoration: none !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -168,15 +171,12 @@ input {
 }
 }
 
-
 .nav-item a{
   font-family: 'HK Bold', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 6px;
-  font-size: 15px;
+  font-size: 19px;
+  line-height: 19px;
   color: #45423E !important;
 }
 
@@ -285,12 +285,13 @@ input {
   color: #1C2227 !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
+  margin-right: 15px !important;
 }
 
 .login:hover {
   border-color: #686764 !important;
   color: #686764 !important;
+  text-decoration: none !important;
 }
 
 .text-muted {
@@ -299,7 +300,8 @@ input {
 
 @media screen and (min-width: 768px) {
 .home-description {
-  padding-right: 25%;
+  padding-right: 20%;
+  padding-left: 20%;
   font-family: 'Proxima Nova', sans-serif !important;
 }
 }
@@ -459,4 +461,8 @@ button:disabled {
   box-shadow: 0px 0px #1C22275b;
   min-width: 200px;
   font-family: 'HK Bold', sans-serif !important;
+}
+
+#form-button {
+  min-height: 50px !important;
 }

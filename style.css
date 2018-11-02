@@ -30,6 +30,7 @@ body {
     }
 
 .navbar-brand {
+  margin-top: -3px !important;
   font-size: 1.5em !important;
   color: #1C2227 !important;
 }
@@ -49,7 +50,7 @@ p {
 .jumbotron {
   background: none;
   color: #1C2227;
-  text-align: left;
+  text-align: center;
   height: calc(100vh - 3.5rem);
   border-radius: 0px !important;
 }
@@ -124,8 +125,6 @@ input {
   color: #f8f5ef !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
-  line-height: 20px !important;
 }
 
 .register:hover {
@@ -133,7 +132,6 @@ input {
   border: 3px solid #3c81a8;
   color: #f8f5ef !important;
   border-radius: 2px;
-  font-size: 15px !important;
   text-decoration: none !important;
 }
 
@@ -151,11 +149,10 @@ input {
 
 .nav-item a{
   font-family: 'HK Bold', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 19px;
+  line-height: 19px;
   color: #45423E !important;
 }
 
@@ -264,9 +261,7 @@ input {
   color: #1C2227 !important;
   font-family: 'HK Bold', sans-serif !important;
   border-radius: 2px;
-  font-size: 15px !important;
   margin-right: 15px !important;
-  line-height: 20px !important;
 }
 
 .login:hover {
@@ -281,7 +276,8 @@ input {
 
 @media screen and (min-width: 768px) {
 .home-description {
-  padding-right: 25%;
+  padding-right: 20%;
+  padding-left: 20%;
   font-family: 'Proxima Nova', sans-serif !important;
 }
 }
@@ -432,3 +428,13 @@ canvas{
     left: 0;
     background: #f4f7f7;
 }
+
+.sec-head {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  position: absolute;
+  top: 25vh;
+  bottom: 25vh;
+  left: 0;
+  }
