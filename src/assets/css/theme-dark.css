@@ -39,7 +39,7 @@
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
-    --font-family-sans-serif: 'Cerebri Sans', sans-serif;
+    --font-family-sans-serif: 'Proxima Nova', sans-serif;
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
@@ -82,7 +82,7 @@ section
 
 body
 {
-    font-family: 'Cerebri Sans', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size: .9375rem;
     font-weight: 400;
     line-height: 1.5;
@@ -483,8 +483,7 @@ h6,
 .h5,
 .h6
 {
-    font-family: inherit;
-    font-weight: 500;
+    font-family: 'HK Bold' !important;
     line-height: 1.1;
 
     margin-bottom: 1.125rem;
@@ -6752,7 +6751,7 @@ button.close
 
 .tooltip
 {
-    font-family: 'Cerebri Sans', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size: .8125rem;
     font-weight: 400;
     font-style: normal;
@@ -6899,7 +6898,7 @@ button.close
 
 .popover
 {
-    font-family: 'Cerebri Sans', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size: .8125rem;
     font-weight: 400;
     font-style: normal;
@@ -16313,32 +16312,32 @@ button:focus
 
 @font-face
 {
-    font-family: 'Cerebri Sans';
+    font-family: 'Proxima Nova';
     font-weight: 400;
     font-style: normal; 
 
-    src: url('../fonts/cerebrisans/cerebrisans-regular.eot');
-    src: url('../fonts/cerebrisans/cerebrisans-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/cerebrisans/cerebrisans-regular.woff') format('woff'), url('../fonts/cerebrisans/cerebrisans-regular.ttf') format('truetype');
+    src: url('../fonts/cerebrisans/Proxima Nova.otf');
+    src: url('../fonts/cerebrisans/Proxima Nova.otf') format('opentype');
 }
 
 @font-face
 {
-    font-family: 'Cerebri Sans';
+    font-family: 'Proxima Nova';
     font-weight: 500;
     font-style: normal; 
 
-    src: url('../fonts/cerebrisans/cerebrisans-medium.eot');
-    src: url('../fonts/cerebrisans/cerebrisans-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/cerebrisans/cerebrisans-medium.woff') format('woff'), url('../fonts/cerebrisans/cerebrisans-medium.ttf') format('truetype');
+    src: url('../fonts/cerebrisans/Proxima Nova.otf');
+    src: url('../fonts/cerebrisans/Proxima Nova.otf') format('opentype');
 }
 
 @font-face
 {
-    font-family: 'Cerebri Sans';
+    font-family: 'HK Bold';
     font-weight: 600;
     font-style: normal; 
 
-    src: url('../fonts/cerebrisans/cerebrisans-semibold.eot');
-    src: url('../fonts/cerebrisans/cerebrisans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/cerebrisans/cerebrisans-semibold.woff') format('woff'), url('../fonts/cerebrisans/cerebrisans-semibold.ttf') format('truetype');
+    src: url('../fonts/cerebrisans/FoundersGrotesk-Medium.otf');
+    src: url('../fonts/cerebrisans/FoundersGrotesk-Medium.otf') format('opentype');
 }
 
 .bg-fixed-bottom
@@ -17503,7 +17502,7 @@ button:focus
 
 .ql-container
 {
-    font-family: 'Cerebri Sans', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 .ql-toolbar
