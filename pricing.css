@@ -489,7 +489,7 @@ button:disabled {
 
 .total-price {
   float: right !important;
-  min-width: 68px !important;
+  min-width: 65px !important;
 }
 
 .card-text{
@@ -515,10 +515,10 @@ ul, li {
 }
 
 .permonth {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 10px !important;
   float: right !important;
-  margin-top: 12px !important;
+  margin-top: 11px !important;
   color: #122c3a7e !important;
   font-family: 'HK Bold', sans-serif !important;
 }
