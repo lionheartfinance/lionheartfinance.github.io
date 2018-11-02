@@ -85,7 +85,7 @@ p {
 
 input {
   border-radius: 2px !important;
-  border: 3px solid #1C2227 !important;
+  border: 3px solid #122c3a !important;
 }
 
 .btn-primary {
@@ -93,7 +93,7 @@ input {
   border: 3px solid #4998c5;
   border-radius: 2px;
   color: #f4f7f7;
-  box-shadow: 0px 0px #1C22275b;
+  box-shadow: 0px 0px #122c3a5b;
   min-width: 200px;
   font-family: 'HK Bold', sans-serif !important;
 }
@@ -109,19 +109,19 @@ input {
 
 .btn-secondary {
   background: #f4f7f7;
-  color: #1C2227;
+  color: #122c3a;
   border: 3px solid #f4f7f7;
   border-radius: 2px;
 }
 .btn-secondary:hover {
   background: #dfe2e2;
   border: 3px solid #dfe2e2;
-  color: #1C2227;
+  color: #122c3a;
   border-radius: 2px;
 }
 
 .navbar {
-  color: #1C2227 !important;
+  color: #122c3a !important;
 }
 
 .register {
@@ -224,7 +224,7 @@ input {
   top: 50%;
   left: 0;
   margin-top: -1px;
-  background: #1C2227;
+  background: #122c3a;
 }
 .close::before {
   -webkit-transform: rotate(45deg);
@@ -431,7 +431,7 @@ canvas{
   position: absolute;
     top: 0;
     left: 0;
-    background: #1C2227;
+    background: #122c3a;
 }
 
 button:disabled {
@@ -439,7 +439,7 @@ button:disabled {
   border: 3px solid #686764 !important;
   border-radius: 2px;
   color: #f4f7f7 !important;
-  box-shadow: 0px 0px #1C22275b;
+  box-shadow: 0px 0px #122c3a5b;
   min-width: 200px;
   font-family: 'HK Bold', sans-serif !important;
 }
