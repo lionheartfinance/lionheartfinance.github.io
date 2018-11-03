@@ -483,13 +483,13 @@ button:disabled {
 .price {
     margin-top: 5px !important;
     font-family: 'HK Bold', sans-serif !important;
-    font-size: 24px !important;
+    font-size: 34px !important;
     color: #122c3a7e !important;
 }
 
 .total-price {
   float: right !important;
-  min-width: 65px !important;
+  min-width: 80px !important;
 }
 
 .card-text{
@@ -503,6 +503,8 @@ button:disabled {
     border-radius: 2px !important;
     border: none !important;
     height: 100% !important;
+    margin-left: -10px !important;
+    margin-right: -10px !important;
 }
 
 ul, li {
@@ -515,10 +517,10 @@ ul, li {
 }
 
 .permonth {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 10px !important;
   float: right !important;
-  margin-top: 11px !important;
+  margin-top: 10px !important;
   color: #122c3a7e !important;
   font-family: 'HK Bold', sans-serif !important;
 }
