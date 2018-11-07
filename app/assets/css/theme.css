@@ -16280,7 +16280,7 @@ h6 > a
 .display-3,
 .display-4
 {
-    letter-spacing: -.02em;
+    letter-spacing: 0em;
 }
 
 h1,
@@ -16290,7 +16290,7 @@ h4,
 h5,
 h6
 {
-    letter-spacing: -.02em;
+    letter-spacing: 0em;
 }
 
 h6.text-uppercase
