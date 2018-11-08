@@ -27,6 +27,10 @@
         h1, h2, h3, h4, h5, h6 {
           font-family: 'HK Bold', sans-serif !important;
         }
+
+        .text-light {
+          color: #f4f7f7 !important;
+        }
       
       </style>
 
@@ -37,21 +41,21 @@
 
     <title>Dashkit</title>
   </head>
-  <body class="d-flex align-items-center bg-auth border-top border-top-2 border-primary">
+  <body class="d-flex align-items-center bg-dark">
 
     <!-- CONTENT
     ================================================== -->
-    <div class="container-fluid">
+    <div class="bg-dark container-fluid">
       <div class="row align-items-center justify-content-center">
         <div class="col-12 col-md-5 col-lg-6 col-xl-4 px-lg-6 my-5">
               
           <!-- Heading -->
-          <h1 class="display-4 text-center mb-3">
+          <h1 class="display-4 text-center mb-3 text-light">
             Sign in
           </h1>
           
           <!-- Subheading -->
-          <p class="text-muted text-center mb-5">
+          <p class="text-light text-center mb-5">
             Free access to our dashboard.
           </p>
           
@@ -62,7 +66,7 @@
             <div class="form-group">
 
               <!-- Label -->
-              <label>Email Address</label>
+              <label class="text-light">Email Address</label>
 
               <!-- Input -->
               <input type="email" class="form-control" placeholder="name@address.com">
@@ -72,36 +76,28 @@
             <!-- Password -->
             <div class="form-group">
 
-              <div class="row">
-                <div class="col">
+                <div class="row">
+                    <div class="col">
+                          
+                      <!-- Label -->
+                      <label class="text-light">Password</label>
+    
+                    </div>
+                    <div class="col-auto">
                       
-                  <!-- Label -->
-                  <label>Password</label>
-
-                </div>
-                <div class="col-auto">
-                  
-                  <!-- Help text -->
-                  <a href="password-reset-cover.html" class="form-text small text-muted">
-                    Forgot password?
-                  </a>
-
-                </div>
-              </div> <!-- / .row -->
+                      <!-- Help text -->
+                      <a href="password-reset-cover.html" class="mt-1 form-text small text-muted">
+                        Forgot password?
+                      </a>
+    
+                    </div>
+                  </div>
 
               <!-- Input group -->
               <div class="input-group input-group-merge">
 
                 <!-- Input -->
-                <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
-
-                <!-- Icon -->
-                <div class="input-group-append">
-                  <span class="input-group-text">
-                    <i class="fe fe-eye"></i>
-                  </span>
-                </div>
-
+                <input type="password" class="form-control" placeholder="Enter your password">
               </div>
             </div>
 
@@ -123,7 +119,7 @@
         <div class="col-12 col-md-7 col-lg-6 col-xl-8 d-none d-lg-block">
           
           <!-- Image -->
-          <div class="bg-cover vh-100 mt--1 mr--3" style="background-image: url(assets/img/covers/auth-side-cover.jpg);"></div>
+          <div class="bg-cover vh-100 mt--1 mr--3" style="background-size: cover;background-position: center;background-image: url(https://source.unsplash.com/collection/3484515/)"></div>
 
         </div>
       </div> <!-- / .row -->
