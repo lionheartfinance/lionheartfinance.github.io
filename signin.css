@@ -1,6 +1,8 @@
 body {
   padding-top: 3.5rem;
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100%;
+  background: #122c3a;
 }
 
 @font-face {
@@ -30,7 +32,7 @@ body {
 
 .form-signin {
   width: 100%;
-  padding: 60px 60px 60px 60px !important;
+  padding: 1em 1em 1em 1em !important;
   border-radius: 2px;
   background: #f4f7f7;
 }

@@ -15,7 +15,7 @@ body {
   justify-content: center;
   min-height: calc(100vh - 3.5rem);
   overflow-x: hidden;
-  background: #f4f7f7;
+  background: #122c3a;
 }
 
 @font-face {
@@ -94,7 +94,7 @@ p {
   background: #122c3a;
   color: #f4f7f7;
   text-align: center;
-  height: calc(100vh - 3.5rem);
+  min-height: calc(100vh - 3.5rem);
   border-radius: 0px !important;
   margin-top: 3.5rem;
 }
