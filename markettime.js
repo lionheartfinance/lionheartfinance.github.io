@@ -15,30 +15,15 @@ var checkTime = function() {
   var hour = now.getHours();
   var minutes = now.getMinutes();
 
-  //add AM or PM
-  var suffix = hour >= 12 ? "PM" : "AM";
-
-  // add 0 to one digit minutes
-  if (minutes < 10) {
-    minutes = "0" + minutes
-  };
-
-  if ((dayOfWeek == 0 || dayOfWeek == 6) && hour >= 0 && hour <= 24) {
-    hour = ((hour + 11) % 12 + 1); //i.e. show 1:15 instead of 13:15
+  if ((dayOfWeek == 6 || dayOfWeek == 0) && hour <= 0 && hour >= 24) {
     timeDiv.innerHTML = 'The stock market is currently closed.';
     timeDiv.className = 'closed';
   } 
   
-  else if ((dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour <= 9.5 && hour >= 16) {
-    hour = ((hour + 11) % 12 + 1);
+  else if ((dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 9 + minutes==0 && hour <= 16 + minutes == 30) {
     timeDiv.innerHTML = 'The stock market is currently open.';
     timeDiv.className = 'open';
-  } 
-  
-  else {
-    if (hour == 0 || hour > 12) {
-      hour = ((hour + 11) % 12 + 1); //i.e. show 1:15 instead of 13:15
-    }
+  } else {
     timeDiv.innerHTML = 'The stock market is currently closed.';
     timeDiv.className = 'closed';
   }
@@ -48,5 +33,5 @@ var currentDay = weekday[now.getDay()];
 var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
 $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
 
-setInterval(checkTime, 1000);
+setInterval(checkTime, 300);
 checkTime();

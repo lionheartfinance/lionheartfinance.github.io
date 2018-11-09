@@ -482,8 +482,9 @@ a:hover {
   box-shadow: none;
 }
 
-#timeDiv {
-  background: #00d280;
+.open {
+  background: #00d280 !important;
+  color: #f4f7f7 !important;
   padding: 0.75em 0.75em 0.75em 0.75em !important;
   border-radius: 2px !important;
   text-align: center !important;
@@ -492,4 +493,7 @@ a:hover {
 .closed {
   background: #f4f7f75b !important;
   color: #122c3a !important;
+  padding: 0.75em 0.75em 0.75em 0.75em !important;
+  border-radius: 2px !important;
+  text-align: center !important;
 }
