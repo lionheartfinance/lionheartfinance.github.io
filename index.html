@@ -318,17 +318,17 @@
       $t = $(this);
       x = e.pageX - ($t.offset().left);
       y = e.pageY - ($t.offset().top);
-      return $t.find('.glow').css({
+      return $t.find('.register-glow').css({
         'transform': 'translate(' + x + 'px,' + y + 'px)'
       });
     };
   
     removeGlow = function() {
-      return $('.glow').remove();
+      return $('.register-glow').remove();
     };
   
     addGlow = function() {
-      return $glow.append('<span class="glow"/>');
+      return $glow.append('<span class="register-glow"/>');
     };
   
     $glow.on({
