@@ -473,3 +473,9 @@ a:hover {
   color: #04c077;
   text-decoration: none;
 }
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
