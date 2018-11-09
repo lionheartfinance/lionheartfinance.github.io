@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Sign Up | Lionheart Financial</title>
+    <title>Register | Lionheart Financial</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -29,13 +29,13 @@
           <div id="myNav" class="overlay">
               <a href="javascript:void(0)" class="close hairline" onclick="closeNav()"></a>
               <div class="overlay-content">
-                    <a href="index.html">Home</a>
-                    <a href="offerings.html">Offerings</a>
-                    <a href="how.html">How it Works</a>
-                    <a href="pricing.html">Pricing</a>
-                    <center><a href="register.html" onclick="closeNav()"><div style="font-size: 0.5em; margin-top: 30px;cursor: pointer;width: 70% !important;" class="register">Invest Now</div></a></center>
-                    <center><a href="signin.html"><div style="border-color: #1C2227 !important; color: #1C2227 !important;font-size: 0.5em; margin-top: 10px;cursor: pointer;width: 70% !important;" class="login">Sign In</div></a></center>
-                  </div>
+                  <a href="index.html">Home</a>
+                  <a href="offerings.html">Offerings</a>
+                  <a href="how.html">How it Works</a>
+                  <a href="pricing.html">Pricing</a>
+                  <center><a href="register.html"><div style="font-size: 0.5em;margin-top: 30px;cursor: pointer;width: 70% !important;" class="register">Invest Now</div></a></center>
+                  <center><a href="signin.html" onclick="closeNav()"><div style="border-color: #1C2227 !important; color: #1C2227 !important;font-size: 0.5em;margin-top: 10px;cursor: pointer;width: 70% !important;" class="login">Sign In</div></a></center>
+                </div>
             </div>
     
             <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 18px; right: 25px;cursor:pointer" onclick="openNav()"></span>
@@ -74,201 +74,60 @@
                 <div style="clear:both;"></div>
               </div>
             </nav>
+      <div class="jumbotron" style="width: 100% !important;">
+      <div style="z-index: 9999 !important; margin: 0% 5% 0% 5% !important;" class="sections">
+        <div class="row" style="margin-top: 13%; width: 100%;">
+          <div style="padding-left: 5%; padding-right: 5%; text-align: left;" class="col-md-7 col-sm-12">
+          <h1 style="font-size: 3.6em" class="mb-4"><span style="font-family: 'HK Bold', sans-serif;text-decoration: underline; text-decoration-color: #00d280;">Simplified monitoring</span> to help you build a better portfolio.</h1>
+          <ul>
+            <li>Make predicitions in the market</li>
+            <li>Customizable groups</li>
+            <li>100% free options monitoring system</li>
+          </ul>
+          </div>
+          <div class="col-md-5 col-sm-12">
+          <form class="form-signin">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
+            </div>
 
-    <canvas id="canvas"></canvas>
-    <form class="form-signin">
-      <div class="text-center mb-4">
-        <h1 style="font-size: 3.6em;" class="mb-3 font-weight-normal">Sign Up to Invest</h1>
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+
+            <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required>
+            </div>
+
+            <button id="form-button" class="btn btn-lg btn-primary btn-block" type="submit" disabled="disabled">Register</button>
+          </form>
+          </div>
+        </div>
+        
+        </div>
       </div>
-
-      <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
-      </div>
-
-      <div class="form-label-group">
-            <input onchange="addText()" type="text" id="inputUser" class="form-control" placeholder="Choose a Username" required>
-      </div>
-
-      <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      </div>
-
-      <button id="form-button" class="btn btn-lg btn-primary btn-block" type="submit" disabled="disabled">Invest Now</button>
-      <p class="mt-5 mb-3 text-muted text-center"><small>&copy; 2018, Lionheart Finance.</small></p>
-    </form>
-    <script type="text/javascript">
-      function addText() {
-          var input = document.getElementById('inputUser');
-          input.value = '@' + input.value;
-      }
-  </script>
+          
     <script>
-            function openNav() {
-              document.getElementById("myNav").style.height = "100%";
-            }
-            
-            function closeNav() {
-              document.getElementById("myNav").style.height = "0%";
-            }
-        </script>
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
     <script>
-        let w, h;
-        const OPTIONS = {
-          speed: null,
-          color: '#f3d1c9',
-          radius: 4,
-          lineWidth: 0.5,
-          distance: 110,
-        }
-    
-        String.prototype.toRGB = function(){
-            let color = this.toLowerCase();
-            let reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-            console.log(color, reg.test(color))
-            if (color && reg.test(color)) {
-                if (color.length === 4) {
-                    let colorNew = "#";
-                    for (let i=1; i<4; i+=1) {
-                        colorNew += color.slice(i, i+1).concat(color.slice(i, i+1));
-                    }
-                    color = colorNew;
-                }
-                let colorChange = [];
-                for (let i=1; i<7; i+=2) {
-                    colorChange.push(parseInt("0x"+color.slice(i, i+2)));
-                }
-                return "RGBA(" + colorChange.join(",") + ", 1)";
-            }else{
-              return null
-            }
-            return color;
-        };
-    
-        OPTIONS.color = OPTIONS.color.toRGB();
-    
-        class Circle{
-          constructor(ctx){
-            this.ctx = ctx;
-            this.x = Math.random()*w;
-            this.y = Math.random()*h;
-            this.speed = OPTIONS.speed || 0.55;
-            this.color = OPTIONS.color ? OPTIONS.color : `rgba(200, 200, 200, 1)`;
-            this.radius = Math.floor(Math.random()*OPTIONS.radius) || Math.floor(Math.random()*2);
-            this.vector = {
-              x: Math.cos(Math.floor(Math.random()*360))*this.speed,
-              y: Math.sin(Math.floor(Math.random()*360))*this.speed
-            };
-          }
-    
-          rule(){
-            if (this.x >= w || this.x <= 0){
-              this.vector.x *= -1;
-            }
-    
-            if (this.y >= h || this.y <= 0) {
-              this.vector.y *= -1;
-            }
-    
-            if (this.x > w) { this.x = w }
-            if (this.x < 0) { this.x = 0 }
-            if (this.y > h) { this.y = h }
-            if (this.y < 0) { this.y = 0 }
-          }
-    
-          draw(){
-            this.ctx.save();
-            this.ctx.beginPath();
-            this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
-            this.ctx.fillStyle = this.color;
-            this.ctx.fill();
-            this.ctx.closePath();
-            this.ctx.restore();
-          }
-    
-          update(){
-            this.rule();
-            this.x += this.vector.x;
-            this.y += this.vector.y;
-          }
-        }
-    
-        let link = (circle, circles, ctx) => {
-          for (let i = 0; i < circles.length; i++) {
-            let distancex = Math.abs(circles[i].x - circle.x);
-            let distancey = Math.abs(circles[i].y - circle.y);
-            let distance = Math.sqrt(Math.pow(distancex, 2) + Math.pow(distancey, 2));
-            if (distance <= Math.floor((OPTIONS.distance/1920)*window.innerWidth)) {
-              ctx.lineWidth = OPTIONS.lineWidth || 0.5;
-              ctx.strokeStyle = OPTIONS.color ? OPTIONS.color.replace(/\, 1\)/, `, ${1-distance/Math.floor((250/1920)*window.innerWidth)})`)
-                : `rgba(200, 200, 200, ${1-distance/Math.floor((250/1920)*window.innerWidth)})`;
-              ctx.beginPath();
-              ctx.moveTo(circle.x, circle.y);
-              ctx.lineTo(circles[i].x, circles[i].y);
-              ctx.closePath();
-              ctx.stroke();
-            }
-          }
-        }
-    
-        let initStage = (target) => {
-          const canvas = document.querySelector(target);
-          if (!canvas) {
-            console.error('请输入正确的canvas');
-            return ;
-          }
-          const ctx = canvas.getContext('2d');
-          w = canvas.width = window.innerWidth;
-          h = canvas.height = window.innerHeight;
-          let circles = [];
-          let drawCircle = new Circle();
-          for(let i = 0; i < 100; i++){
-            circles.push(new Circle(ctx))
-          }
-    
-          (function run(){
-            ctx.clearRect(0,0,w,h);
-            circles.forEach(item => {
-              item.draw();
-              item.update();
-            })
-    
-            circles.forEach(item => {
-              link(item, circles, ctx);
-            })
-            window.requestAnimationFrame(run);
-          })()
-        }
-    
-        window.addEventListener('resize', ()=>{
-          w = canvas.width = window.innerWidth;
-          h = canvas.height = window.innerHeight;
-        })
-    
-        initStage('#canvas');
-        </script>
-        <script>
-            $(document).ready(function(){
-              $(window).scroll(function() { // check if scroll event happened
-                if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-                  $(".navbar").css("background-color", "#f4f7f7"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-                } else {
-                  $(".navbar").css("background-color", "transparent"); // if not, change it back to transparent
-                }
-              });
+        $('#inputEmail, #inputPassword').bind('keyup', function() {
+        if(allFilled()) $('#form-button').removeAttr('disabled');
+        });
+
+        function allFilled() {
+            var filled = true;
+            $('body input').each(function() {
+                if($(this).val() == '') filled = false;
             });
-        </script>
-        <script>
-          $('#inputEmail, #inputUser, #inputPassword').bind('keyup', function() {
-          if(allFilled()) $('#form-button').removeAttr('disabled');
-          });
-
-          function allFilled() {
-              var filled = true;
-              $('body input').each(function() {
-                  if($(this).val() == '') filled = false;
-              });
-              return filled;
-          }
-        </script>
+            return filled;
+        }
+      </script>
   </body>
 </html>

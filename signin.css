@@ -1,20 +1,6 @@
-html,
 body {
-  height: 100%;
-}
-
-body {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  min-height: calc(100vh - 3.5rem);
-  overflow-x: hidden;
+  padding-top: 3.5rem;
+  overflow: hidden;
 }
 
 @font-face {
@@ -30,12 +16,12 @@ body {
   src: url("tt_norms_medium.otf") format("opentype");
   }
 @font-face {
-  font-family: 'HK Regular';
-  src: url("HKGrotesk-Regular.otf") format("opentype");
+  font-family: 'Buttons';
+  src: url("Europa-Bold.otf") format("opentype");
   }
 @font-face {
   font-family: 'HK Bold';
-  src: url("FoundersGrotesk-Medium.otf") format("opentype");
+  src: url("HKGrotesk-Bold.otf") format("opentype");
   }
   @font-face {
     font-family: 'Proxima Nova';
@@ -43,15 +29,10 @@ body {
     }
 
 .form-signin {
-  position: absolute;
-  top: 30vh;
-  bottom: 30vh;
-  left: 0 !important;
-  right: 0 !important;
   width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  border-radius: 10px;
+  padding: 60px 60px 60px 60px !important;
+  border-radius: 2px;
+  background: #f4f7f7;
 }
 
 .form-label-group {
@@ -68,11 +49,12 @@ input {
 }
 
 .navbar-brand {
+  font-family: 'Buttons', sans-serif;
   font-size: 1.5em !important;
-  color: #122c3a !important;
+  color: #f4f7f7 !important;
 }
 
-h1, h2, h3, .navbar-brand {
+h1, h2, h3 {
   font-family: 'HK Bold', sans-serif;
 }
 
@@ -85,15 +67,15 @@ p {
 }
 
 .jumbotron {
-  background: none;
-  color: #122c3a;
+  background: #122c3a !important;
+  color: #f4f7f7;
   text-align: center;
   height: calc(100vh - 3.5rem);
   border-radius: 0px !important;
 }
 
 .btn {
-  font-family: 'HK Bold', sans-serif !important;
+  font-family: 'Buttons', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 15px;
@@ -104,58 +86,66 @@ p {
 
 input {
   border-radius: 2px !important;
-  border: 3px solid #122c3a !important;
+  border-bottom: 3px solid #122c3a !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  background: none !important;
+  color: #122c3a !important;
+}
+::placeholder {
+  color: #122c3a93 !important;
 }
 
 .btn-primary {
-  background: #4998c5;
-  border: 3px solid #4998c5;
+  background: #00d280;
+  border: 3px solid #00d280;
   border-radius: 2px;
   color: #f4f7f7;
-  box-shadow: 0px 0px #122c3a5b;
+  box-shadow: 5px 5px #00d2805b;
   min-width: 200px;
-  font-family: 'HK Bold', sans-serif !important;
+  font-family: 'Buttons', sans-serif !important;
 }
 
 .btn-primary:hover {
-  background: #3c81a8;
-  border: 3px solid #3c81a8;
+  background: #04c077;
+  border: 3px solid #04c077;
   border-radius: 2px;
   color: #f4f7f7;
   box-shadow: 0px 0px #ffffff5b;
-  font-family: 'HK Bold', sans-serif !important;
 }
 
 .btn-secondary {
-  background: #f4f7f7;
+  background: #ebf4f9;
   color: #122c3a;
-  border: 3px solid #f4f7f7;
+  border: 3px solid #ebf4f9;
   border-radius: 2px;
 }
 .btn-secondary:hover {
-  background: #dfe2e2;
-  border: 3px solid #dfe2e2;
+  background: #c4dfed;
+  border: 3px solid #c4dfed;
   color: #122c3a;
   border-radius: 2px;
 }
 
 .navbar {
-  color: #122c3a !important;
+  background-color: #122c3a;
+  color: #f4f7f7 !important;
 }
 
 .register {
-  padding: 10px 20px 10px 20px !important;
-  border: 3px solid #4998c5;
-  background: #4998c5;
-  color: #f8f5ef !important;
-  font-family: 'HK Bold', sans-serif !important;
+  padding: 6px 20px 6px 20px !important;
+  border: 3px solid #00d280;
+  background: #00d280;
+  color: #f4f7f7 !important;
+  font-family: 'Buttons', sans-serif !important;
   border-radius: 2px;
 }
 
 .register:hover {
-  background: #3c81a8;
-  border: 3px solid #3c81a8;
-  color: #f8f5ef !important;
+  background: #04c077;
+  border: 3px solid #04c077;
+  color: #f4f7f7 !important;
   border-radius: 2px;
   text-decoration: none !important;
 }
@@ -172,16 +162,18 @@ input {
 }
 
 .nav-item a{
-  font-family: 'HK Bold', sans-serif !important;
+  font-family: 'Buttons', sans-serif !important;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 19px;
-  line-height: 19px;
-  color: #45423E !important;
+  font-size: 17px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  letter-spacing: 0px;
+  color: #f4f7f7 !important;
 }
 
 .nav-item a:hover{
-  color: #686764 !important;
+  color: #dfe2e2 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -279,18 +271,18 @@ input {
 }
 
 .login {
-  padding: 10px 20px 10px 20px !important;
-  border: 3px solid #122c3a;
+  padding: 6px 20px 6px 20px !important;
+  border: 3px solid #f4f7f7;
   background: none;
-  color: #122c3a !important;
-  font-family: 'HK Bold', sans-serif !important;
+  color: #f4f7f7 !important;
+  font-family: 'Buttons', sans-serif !important;
   border-radius: 2px;
   margin-right: 15px !important;
 }
 
 .login:hover {
-  border-color: #686764 !important;
-  color: #686764 !important;
+  border-color: #dfe2e2 !important;
+  color: #dfe2e2 !important;
   text-decoration: none !important;
 }
 
@@ -460,9 +452,24 @@ button:disabled {
   color: #f4f7f7 !important;
   box-shadow: 0px 0px #122c3a5b;
   min-width: 200px;
-  font-family: 'HK Bold', sans-serif !important;
 }
 
 #form-button {
   min-height: 50px !important;
+}
+
+li {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 25px;
+
+}
+
+a {
+  color: #00d280;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #04c077;
+  text-decoration: none;
 }
