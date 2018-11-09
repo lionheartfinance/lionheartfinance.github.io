@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style-alt.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
@@ -45,7 +45,7 @@
       <span style="z-index: 4000; background: none;height: 6px; width: 20px;position: fixed; top: 32px; right: 25px;cursor:pointer" onclick="openNav()"></span>    
     </div>
 
-    <nav id="navbar" class="navbar navbar-expand-md fixed-top">
+    <nav style="background: #122c3a !important;" id="navbar" class="navbar navbar-expand-md fixed-top">
       <a class="navbar-brand" href="index.html" style="letter-spacing: 0.5px !important;">Lionheart</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@
             <a class="nav-link login" href="signin.html">Sign In</a>
           </li>
           <li class="nav-item">
-            <a style="color: #f8f5ef !important;" class="nav-link register" href="register.html">Invest Now</a>
+            <a style="color: #f4f7f7 !important;" class="nav-link register" href="register.html">Invest Now</a>
           </li>
         </ul>
         <div style="clear:both;"></div>
@@ -77,16 +77,16 @@
 
     <main role="main" class="ajax">
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <div class="jumbotron angled">
         <div style="z-index: 9999 !important; margin: 2% 5% 2% 5% !important;" class="sections">
-          <div style="display: table-cell !important; vertical-align: middle !important;" class="sec-head"><h1 id="english" data-text="High-stakes investment monitoring." class="display-5" style="font-size: 3.6em;line-height: 1em;margin-top: 3%;">High-stakes investment monitoring.</h1>
+          <div style="display: table-cell !important; vertical-align: middle !important;" class="sec-head"><h1 id="english" data-text="High-stakes investment monitoring." class="display-5" style="font-size: 3.6em;line-height: 1em;margin-top: 3%;">Simplifying high-stakes investment monitoring.</h1>
           <h4 class="mb-3 home-description" style="font-size: 1.65em;">Allow our algorithms to allocate your portfolio depending on pre-established risk tolerance. We focus on options, shorts, and packaged investment products.</h4>
           <p style="margin-top:20px;"><button style="z-index: 9999;" class="btn btn-primary" href="register.html">Invest Now</button></p>
-          </div> 
+        </div> 
         </div>
-        <canvas id="canvas"></canvas>
+        
       </div>
-      <div style="margin: 2% 5% 2% 5% !important;" class="sections">
+      <div style="margin: 2% 9% 2% 9%;" class="sections second">
         <!-- Example row of columns -->
         <div class="row stick-up">
           <div class="col-md-6 mb-4">
@@ -136,17 +136,6 @@
         function closeNav() {
           document.getElementById("myNav").style.height = "0%";
         }
-    </script>
-    <script>
-        $(document).ready(function(){
-          $(window).scroll(function() { // check if scroll event happened
-            if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-              $(".navbar").css("background-color", "#f4f7f7"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-            } else {
-              $(".navbar").css("background-color", "transparent"); // if not, change it back to transparent
-            }
-          });
-        });
     </script>
     <script>
     let w, h;
