@@ -57,8 +57,8 @@ p {
 }
 @media screen and (min-width: 768px) {
 .angled {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2rem));
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2rem));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3rem));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3rem));
           margin-bottom: 5vh;
           margin-top: -22vh;
 }

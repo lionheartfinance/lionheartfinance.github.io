@@ -102,8 +102,8 @@ p {
   .angled {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3rem));
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3rem));
-            margin-bottom: 5vh;
-            margin-top: 11vh;
+            margin-bottom: 0vh;
+            margin-top: 6vh;
   }
   }
 
@@ -540,6 +540,10 @@ ul, li {
 .badge-secondary {
   background: #f4f7f7 !important;
   color: #122c3a !important;
+}
+.badge-primary {
+  background: #00d280 !important;
+  color: #ffffff !important;
 }
 
 .badge {
