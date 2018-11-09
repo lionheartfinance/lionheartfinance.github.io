@@ -81,7 +81,7 @@
         <div style="z-index: 9999 !important; margin: 2% 5% 2% 5% !important;" class="sections">
           <div style="display: table-cell !important; vertical-align: middle !important;" class="sec-head"><h1 id="english" data-text="High-stakes investment monitoring." class="display-5" style="font-size: 3.6em;line-height: 1em;margin-top: 3%;">Simplifying high-stakes investment monitoring.</h1>
           <h4 class="mb-3 home-description" style="font-size: 1.65em;">Allow our algorithms to allocate your portfolio depending on pre-established risk tolerance. We focus on options, shorts, and packaged investment products.</h4>
-          <p style="margin-top:20px;"><button style="z-index: 9999;" class="btn btn-primary" href="register.html">Invest Now</button></p>
+          <p style="margin-top:20px;"><button style="z-index: 9999;" class="btn btn-primary btn-glow" href="register.html"><span>Invest Now</span></button></p>
         </div> 
         </div>
         
@@ -272,83 +272,75 @@
 
 		initStage('#canvas');
     </script>
-    <!-- <script>
-        $(function() {
-        // setTimeout() function will be fired after page is loaded
-        // it will wait for 5 sec. and then will fire
-        // $("#successMessage").hide() function
-        setTimeout(function() {
-            $("#japanese").hide({}, 1200)
-        }, 1200);
+    <script>
+      (function() {
+  var $glow, addGlow, drawGlow, removeGlow;
+
+  $glow = $('.btn-glow');
+
+  drawGlow = function(e) {
+    var $t, x, y;
+    $t = $(this);
+    x = e.pageX - ($t.offset().left);
+    y = e.pageY - ($t.offset().top);
+    return $t.find('.glow').css({
+      'transform': 'translate(' + x + 'px,' + y + 'px)'
     });
+  };
+
+  removeGlow = function() {
+    return $('.glow').remove();
+  };
+
+  addGlow = function() {
+    return $glow.append('<span class="glow"/>');
+  };
+
+  $glow.on({
+    'mouseenter': addGlow,
+    'mousemove': drawGlow,
+    'mouseleave': removeGlow
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQSxNQUFBLEtBQUEsRUFBQSxPQUFBLEVBQUEsUUFBQSxFQUFBOztFQUFBLEtBQUEsR0FBUSxDQUFBLENBQUUsV0FBRjs7RUFFUixRQUFBLEdBQVcsUUFBQSxDQUFDLENBQUQsQ0FBQTtBQUNULFFBQUEsRUFBQSxFQUFBLENBQUEsRUFBQTtJQUFBLEVBQUEsR0FBSyxDQUFBLENBQUUsSUFBRjtJQUNMLENBQUEsR0FBSSxDQUFDLENBQUMsS0FBRixHQUFVLENBQUMsRUFBRSxDQUFDLE1BQUgsQ0FBQSxDQUFXLENBQUMsSUFBYjtJQUNkLENBQUEsR0FBSSxDQUFDLENBQUMsS0FBRixHQUFVLENBQUMsRUFBRSxDQUFDLE1BQUgsQ0FBQSxDQUFXLENBQUMsR0FBYjtXQUNkLEVBQUUsQ0FBQyxJQUFILENBQVEsT0FBUixDQUFnQixDQUFDLEdBQWpCLENBQ0U7TUFBQSxXQUFBLEVBQWEsWUFBQSxHQUFlLENBQWYsR0FBbUIsS0FBbkIsR0FBMkIsQ0FBM0IsR0FBK0I7SUFBNUMsQ0FERjtFQUpTOztFQU9YLFVBQUEsR0FBYSxRQUFBLENBQUEsQ0FBQTtXQUNYLENBQUEsQ0FBRSxPQUFGLENBQVUsQ0FBQyxNQUFYLENBQUE7RUFEVzs7RUFHYixPQUFBLEdBQVUsUUFBQSxDQUFBLENBQUE7V0FDUixLQUFLLENBQUMsTUFBTixDQUFhLHNCQUFiO0VBRFE7O0VBR1YsS0FBSyxDQUFDLEVBQU4sQ0FDRTtJQUFBLFlBQUEsRUFBYyxPQUFkO0lBQ0EsV0FBQSxFQUFhLFFBRGI7SUFFQSxZQUFBLEVBQWM7RUFGZCxDQURGO0FBZkEiLCJzb3VyY2VzQ29udGVudCI6WyIkZ2xvdyA9ICQoJy5idG4tZ2xvdycpXG5cbmRyYXdHbG93ID0gKGUpIC0+XG4gICR0ID0gJCh0aGlzKVxuICB4ID0gZS5wYWdlWCAtICgkdC5vZmZzZXQoKS5sZWZ0KVxuICB5ID0gZS5wYWdlWSAtICgkdC5vZmZzZXQoKS50b3ApXG4gICR0LmZpbmQoJy5nbG93JykuY3NzXG4gICAgJ3RyYW5zZm9ybSc6ICd0cmFuc2xhdGUoJyArIHggKyAncHgsJyArIHkgKyAncHgpJ1xuXG5yZW1vdmVHbG93ID0gLT5cbiAgJCgnLmdsb3cnKS5yZW1vdmUoKVxuXG5hZGRHbG93ID0gLT5cbiAgJGdsb3cuYXBwZW5kICc8c3BhbiBjbGFzcz1cImdsb3dcIi8+J1xuXG4kZ2xvdy5vblxuICAnbW91c2VlbnRlcic6IGFkZEdsb3dcbiAgJ21vdXNlbW92ZSc6IGRyYXdHbG93XG4gICdtb3VzZWxlYXZlJzogcmVtb3ZlR2xvdyJdfQ==
+//# sourceURL=coffeescript
     </script>
     <script>
-        $(function() {
-        // setTimeout() function will be fired after page is loaded
-        // it will wait for 5 sec. and then will fire
-        // $("#successMessage").hide() function
-        setTimeout(function() {
-            $("#english").show({}, 1200)
-        }, 1200);
-    });
-    </script> -->
-    <!--<script>
-    // Glitch Timeline Function
-var $text = document.querySelector('.btn-glitch-active'),
-    $filter = document.querySelector('.svg-sprite'),
-    $turb = $filter.querySelector('#filter feTurbulence'),
-    turbVal = { val: 0.000001 },
-    turbValX = { val: 0.000001 };
-
-var glitchTimeline = function() {
-    var timeline = new TimelineMax({
-        repeat: -1,
-        repeatDelay: 2,
-        paused: true,
-        onUpdate: function () {
-            $turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
-        }
-    });
-
-    timeline
-        .to(turbValX, 0.1, { val: 0.5 })
-        .to(turbVal, 0.1, { val: 0.02 });
-    timeline
-        .set(turbValX, { val: 0.000001 })
-        .set(turbVal, { val: 0.000001 });
-    timeline
-        .to(turbValX, 0.2, { val: 0.4 }, 0.4)
-        .to(turbVal, 0.2, { val: 0.002 }, 0.4);
-    timeline
-        .set(turbValX, { val: 0.000001 })
-        .set(turbVal, { val: 0.000001 });
-
-    // console.log("duration is: " + timeline.duration());
-
-    return {
-        start: function() {
-            timeline.play(0);
-        },
-        stop: function() {
-            timeline.pause();
-        }
+        (function() {
+    var $glow, addGlow, drawGlow, removeGlow;
+  
+    $glow = $('.register');
+  
+    drawGlow = function(e) {
+      var $t, x, y;
+      $t = $(this);
+      x = e.pageX - ($t.offset().left);
+      y = e.pageY - ($t.offset().top);
+      return $t.find('.glow').css({
+        'transform': 'translate(' + x + 'px,' + y + 'px)'
+      });
     };
-};
-
-btnGlitch = new glitchTimeline();
-
-$('.btn-glitch')
-    .on('mouseenter', function () {
-          $(this).addClass('btn-glitch-active');
-          btnGlitch.start();
-    })
-    .on('mouseleave', function () {
-        var $this = $(this);
-        if ( $this.hasClass('btn-glitch-active') ) {
-            $this.removeClass('btn-glitch-active');
-            btnGlitch.stop();
-        }
+  
+    removeGlow = function() {
+      return $('.glow').remove();
+    };
+  
+    addGlow = function() {
+      return $glow.append('<span class="glow"/>');
+    };
+  
+    $glow.on({
+      'mouseenter': addGlow,
+      'mousemove': drawGlow,
+      'mouseleave': removeGlow
     });
-    </script>-->
+  
+  }).call(this);
+  
+  //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQSxNQUFBLEtBQUEsRUFBQSxPQUFBLEVBQUEsUUFBQSxFQUFBOztFQUFBLEtBQUEsR0FBUSxDQUFBLENBQUUsV0FBRjs7RUFFUixRQUFBLEdBQVcsUUFBQSxDQUFDLENBQUQsQ0FBQTtBQUNULFFBQUEsRUFBQSxFQUFBLENBQUEsRUFBQTtJQUFBLEVBQUEsR0FBSyxDQUFBLENBQUUsSUFBRjtJQUNMLENBQUEsR0FBSSxDQUFDLENBQUMsS0FBRixHQUFVLENBQUMsRUFBRSxDQUFDLE1BQUgsQ0FBQSxDQUFXLENBQUMsSUFBYjtJQUNkLENBQUEsR0FBSSxDQUFDLENBQUMsS0FBRixHQUFVLENBQUMsRUFBRSxDQUFDLE1BQUgsQ0FBQSxDQUFXLENBQUMsR0FBYjtXQUNkLEVBQUUsQ0FBQyxJQUFILENBQVEsT0FBUixDQUFnQixDQUFDLEdBQWpCLENBQ0U7TUFBQSxXQUFBLEVBQWEsWUFBQSxHQUFlLENBQWYsR0FBbUIsS0FBbkIsR0FBMkIsQ0FBM0IsR0FBK0I7SUFBNUMsQ0FERjtFQUpTOztFQU9YLFVBQUEsR0FBYSxRQUFBLENBQUEsQ0FBQTtXQUNYLENBQUEsQ0FBRSxPQUFGLENBQVUsQ0FBQyxNQUFYLENBQUE7RUFEVzs7RUFHYixPQUFBLEdBQVUsUUFBQSxDQUFBLENBQUE7V0FDUixLQUFLLENBQUMsTUFBTixDQUFhLHNCQUFiO0VBRFE7O0VBR1YsS0FBSyxDQUFDLEVBQU4sQ0FDRTtJQUFBLFlBQUEsRUFBYyxPQUFkO0lBQ0EsV0FBQSxFQUFhLFFBRGI7SUFFQSxZQUFBLEVBQWM7RUFGZCxDQURGO0FBZkEiLCJzb3VyY2VzQ29udGVudCI6WyIkZ2xvdyA9ICQoJy5idG4tZ2xvdycpXG5cbmRyYXdHbG93ID0gKGUpIC0+XG4gICR0ID0gJCh0aGlzKVxuICB4ID0gZS5wYWdlWCAtICgkdC5vZmZzZXQoKS5sZWZ0KVxuICB5ID0gZS5wYWdlWSAtICgkdC5vZmZzZXQoKS50b3ApXG4gICR0LmZpbmQoJy5nbG93JykuY3NzXG4gICAgJ3RyYW5zZm9ybSc6ICd0cmFuc2xhdGUoJyArIHggKyAncHgsJyArIHkgKyAncHgpJ1xuXG5yZW1vdmVHbG93ID0gLT5cbiAgJCgnLmdsb3cnKS5yZW1vdmUoKVxuXG5hZGRHbG93ID0gLT5cbiAgJGdsb3cuYXBwZW5kICc8c3BhbiBjbGFzcz1cImdsb3dcIi8+J1xuXG4kZ2xvdy5vblxuICAnbW91c2VlbnRlcic6IGFkZEdsb3dcbiAgJ21vdXNlbW92ZSc6IGRyYXdHbG93XG4gICdtb3VzZWxlYXZlJzogcmVtb3ZlR2xvdyJdfQ==
+  //# sourceURL=coffeescript
+      </script>
   </body>
 </html>

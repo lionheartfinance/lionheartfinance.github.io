@@ -64,6 +64,13 @@ p {
 }
 }
 
+span {
+  font-family: 'Buttons', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
 .btn {
   font-family: 'Buttons', sans-serif !important;
   text-transform: uppercase;
@@ -481,4 +488,36 @@ canvas{
   .second {
     margin-top: 8rem !important;
   }
+}
+
+.btn-glow {
+  position: absolute;
+  top: calc(50% - 70px);
+  padding: 12px 0px;
+  min-width: 240px;
+  text-decoration: none;
+  overflow: hidden;
+  background: #00d280;
+}
+.btn-glow span:not(.glow) {
+  position: relative;
+  z-index: 1;
+}
+.btn-glow:hover {
+  color: #fff;
+}
+.btn-glow:focus {
+  outline: none;
+}
+.btn-glow:active {
+  transform: translateY(1px);
+}
+.glow {
+  height: 160px;
+  width: 160px;
+  background: radial-gradient(circle closest-side, #00d280, transparent);
+  position: absolute;
+  border-radius: 100%;
+  top: -80px;
+  left: -80px;
 }

@@ -36,15 +36,15 @@ body {
   }
   @font-face {
     font-family: 'Buttons';
-    src: url("../fonts/Europa-Bold.otf") format("opentype");
+    src: url("Europa-Bold.otf") format("opentype");
     }
   @font-face {
     font-family: 'HK Bold';
-    src: url("../fonts/HKGrotesk-Bold.otf") format("opentype");
+    src: url("HKGrotesk-Bold.otf") format("opentype");
     }
     @font-face {
       font-family: 'Proxima Nova';
-      src: url("../fonts/Proxima-Nova.otf") format("opentype");
+      src: url("Proxima-Nova.otf") format("opentype");
       }
 
 .form-signin {
