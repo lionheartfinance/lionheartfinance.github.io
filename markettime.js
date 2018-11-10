@@ -20,7 +20,7 @@ var checkTime = function() {
     timeDiv.className = 'closed';
   } 
   
-  else if ((dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 9 + minutes==0 && hour <= 16 + minutes == 30) {
+  else if ((dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 9 + minutes == 30 && hour <= 16 + minutes == 0) {
     timeDiv.innerHTML = 'The stock market is currently open.';
     timeDiv.className = 'open';
   } else {
