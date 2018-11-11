@@ -34,8 +34,11 @@ body {
   width: 100%;
   padding: 1em 1em 1em 1em !important;
   border-radius: 2px;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
   background: #f4f7f7;
 }
+
 
 .form-label-group {
   position: relative;
@@ -54,6 +57,10 @@ input {
   font-family: 'Buttons', sans-serif;
   font-size: 1.5em !important;
   color: #f4f7f7;
+}
+
+.navbar-brand:hover {
+  color: #f4f7f7 !important;
 }
 
 h1, h2, h3 {
@@ -463,7 +470,8 @@ button:disabled {
 li {
   font-family: 'Proxima Nova', sans-serif;
   font-size: 25px;
-
+  list-style-type: none !important;
+  margin-left: -8px !important;
 }
 
 a {
@@ -482,18 +490,26 @@ a:hover {
   box-shadow: none;
 }
 
+#timeDiv {
+  font-size: 18px !important;
+}
+
 .open {
   background: #00d280 !important;
   color: #f4f7f7 !important;
-  padding: 0.75em 0.75em 0.75em 0.75em !important;
-  border-radius: 2px !important;
+  padding: 0.5em 0.5em 0.5em 0.5em !important;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
   text-align: center !important;
 }
 
 .closed {
   background: #f4f7f75b !important;
   color: #122c3a !important;
-  padding: 0.75em 0.75em 0.75em 0.75em !important;
-  border-radius: 2px !important;
+  padding: 0.5em 0.5em 0.5em 0.5em !important;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
   text-align: center !important;
 }
