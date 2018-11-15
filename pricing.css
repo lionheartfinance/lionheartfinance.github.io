@@ -551,3 +551,7 @@ ul, li {
   font-size: 14px !important;
   font-family: 'Proxima Nova', sans-serif !important;
 }
+
+.navbar-right {
+  line-height: 25px !important;
+}

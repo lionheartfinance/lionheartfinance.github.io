@@ -231,7 +231,7 @@ input {
   display: block;
   transition: 0.3s;
   z-index: 9999;
-  color: #4998c5;
+  color: #00d280;
 }
 
 .overlay a:hover, .overlay a:focus, .overlay a:active {
@@ -520,4 +520,7 @@ canvas{
   border-radius: 100%;
   top: -80px;
   left: -80px;
+}
+.navbar-right {
+  line-height: 25px !important;
 }

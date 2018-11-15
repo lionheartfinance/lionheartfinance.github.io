@@ -513,3 +513,6 @@ a:hover {
   border-bottom-right-radius: 0px !important;
   text-align: center !important;
 }
+.navbar-right {
+  line-height: 25px !important;
+}
