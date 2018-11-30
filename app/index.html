@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="assets/css/theme-dark.css" id="stylesheetDark">
     <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="stocks.js"></script>
+    <script src="stock2.js"></script>
+    <script src="stock3.js"></script>
+
     <style>
     body {
       display: none;
@@ -26,15 +31,12 @@
       h1, h2, h3, h4, h5, h6 {
         font-family: 'HK Bold', sans-serif !important;
       }
-    
     </style>
 
     <script>
       var colorScheme = ( localStorage.getItem('dashkitColorScheme') ) ? localStorage.getItem('dashkitColorScheme') : 'light';
     </script>
     
-    
-
     <title>Dashkit</title>
   </head>
   <body>
@@ -1094,10 +1096,10 @@
             </ul>
 
             <!-- Divider -->
-            <hr class="navbar-divider my-3">
+            <hr class="navbar-divider my-5">
 
             <!-- Heading -->
-            <h6 class="navbar-heading">
+            <h6 class="navbar-heading mb-0 pb-2">
               Documentation
             </h6>
 
@@ -2326,15 +2328,9 @@
 
                     <!-- Heading -->
                     <span class="h2 mb-0">
-                      $7,273.08
-                    </span>
-
-                  </div>
-                  <div class="col-3">
-                        
-                    <span class="badge badge-soft-danger mt--1">
-                      –0.25%
-                    </span>
+                      $<span id="stockPrice3"></span>
+                    </span><br>
+                    <span class="badge mt-2" id="stockPercent3"></span>
 
                   </div>
                 </div> <!-- / .row -->
@@ -2357,15 +2353,9 @@
 
                     <!-- Heading -->
                     <span class="h2 mb-0">
-                      $2,737.76
-                    </span>
-
-                  </div>
-                  <div class="col-3">
-                        
-                    <span class="badge badge-soft-danger mt--1">
-                      -0.22%
-                    </span>
+                      $<span id="stockPrice2"></span>
+                    </span><br>
+                    <span class="badge mt-2" id="stockPercent2"></span>
 
                   </div>
                 </div> <!-- / .row -->
@@ -2388,15 +2378,9 @@
 
                     <!-- Heading -->
                     <span class="h2 mb-0">
-                      $25,338.84
-                    </span>
-
-                  </div>
-                  <div class="col-3">
-                        
-                    <span class="badge badge-soft-danger mt--1">
-                      -0.11%
-                    </span>
+                      $<span id="stockPrice"></span>
+                    </span><br>
+                    <span class="badge mt-2" id="stockPercent"></span>
 
                   </div>
                 </div> <!-- / .row -->
