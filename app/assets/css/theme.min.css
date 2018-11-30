@@ -11995,20 +11995,20 @@ a.text-white:hover {
 }
 
 .navbar-light {
-    border-color: #0e232e;
-    background-color: #0e232e;
+    border-color: #0e232e !important;
+    background-color: #0e232e !important;
 }
 
 .navbar-light .navbar-heading {
-    color: #d3d3d3
+    color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-divider {
-    border-color: #d3d3d3
+    border-color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-user {
-    border-top-color: #d3d3d3
+    border-top-color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-user-link {
@@ -12025,17 +12025,17 @@ a.text-white:hover {
 }
 
 .navbar-light .navbar-collapse:before {
-    border-top-color: #d3d3d3
+    border-top-color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-brand,
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: #d3d3d3
+    color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #d3d3d3
+    color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
@@ -12044,18 +12044,18 @@ a.text-white:hover {
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
-    color: rgba(149, 170, 201, 0.3);
+    color: rgba(149, 170, 201, 0.3) !important;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #d3d3d3
+    color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-toggler {
-    color: #d3d3d3;
+    color: #d3d3d3 !important;
     border-color: transparent
 }
 
@@ -12064,13 +12064,13 @@ a.text-white:hover {
 }
 
 .navbar-light .navbar-text {
-    color: #d3d3d3
+    color: #d3d3d3 !important;
 }
 
 .navbar-light .navbar-text a,
 .navbar-light .navbar-text a:focus,
 .navbar-light .navbar-text a:hover {
-    color: #d3d3d3;
+    color: #d3d3d3 !important;
 }
 
 /* Navbar-Light Alternative */
