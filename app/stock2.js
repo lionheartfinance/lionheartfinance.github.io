@@ -11,8 +11,8 @@ $(document).ready(function() {
   });
 
   function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
-  }
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
   function roundToTwo(num) {    
     return +(Math.round(num + "e+2")  + "e-2");
@@ -29,7 +29,7 @@ $(document).ready(function() {
         var stockPercent2 = data['Global Quote']['10. change percent']
         var stockChange2 = data['Global Quote']['08. previous close']
 
-        $('#stockPrice2').html(parseFloat(Math.round(stockPrice2 * 100) / 100).toFixed(2));
+        $('#stockPrice2').html(numberWithCommas(parseFloat(Math.round(stockPrice2 * 100) / 100).toFixed(2)));
         $('#stockPercent2').html(stockPercent2);
 
         if(stockChange2 > stockPrice2){

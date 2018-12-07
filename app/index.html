@@ -18,10 +18,7 @@
     <link rel="stylesheet" href="assets/css/theme-dark.css" id="stylesheetDark">
     <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="stocks.js"></script>
-    <script src="stock2.js"></script>
-    <script src="stock3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <style>
     body {
@@ -2317,7 +2314,7 @@
           <div class="col-12 col-md-6 col-xl">
             
             <!-- Card -->
-            <div class="card">
+            <div class="card bg-dark text-white">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-9">
@@ -2328,9 +2325,10 @@
 
                     <!-- Heading -->
                     <span class="h2 mb-0">
-                      $<span id="stockPrice3"></span>
+                      $<!--<span id="stockPrice"></span>-->
                     </span><br>
-                    <span class="badge mt-2" id="stockPercent3"></span>
+                    <!--<span class="badge mt-2" id="stockPercent"></span>-->
+                    <span class="badge badge-soft-success mt-2" >0.00%</span>
 
                   </div>
                 </div> <!-- / .row -->
@@ -2342,7 +2340,7 @@
           <div class="col-12 col-md-6 col-xl">
             
             <!-- Card -->
-            <div class="card">
+            <div class="card bg-dark text-white">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-9">
@@ -2353,9 +2351,10 @@
 
                     <!-- Heading -->
                     <span class="h2 mb-0">
-                      $<span id="stockPrice2"></span>
+                      $<!--<span id="stockPrice"></span>-->
                     </span><br>
-                    <span class="badge mt-2" id="stockPercent2"></span>
+                    <!--<span class="badge mt-2" id="stockPercent"></span>-->
+                    <span class="badge badge-soft-success mt-2" >0.00%</span>
 
                   </div>
                 </div> <!-- / .row -->
@@ -2367,7 +2366,7 @@
           <div class="col-12 col-md-12 col-xl">
             
             <!-- Card -->
-            <div class="card">
+            <div class="card bg-dark text-white">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-9">
@@ -2378,9 +2377,10 @@
 
                     <!-- Heading -->
                     <span class="h2 mb-0">
-                      $<span id="stockPrice"></span>
+                      $<!--<span id="stockPrice"></span>-->
                     </span><br>
-                    <span class="badge mt-2" id="stockPercent"></span>
+                    <!--<span class="badge mt-2" id="stockPercent"></span>-->
+                    <span class="badge badge-soft-success mt-2" >0.00%</span>
 
                   </div>
                 </div> <!-- / .row -->
@@ -2390,6 +2390,125 @@
               
           </div>
         </div>
+
+
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl">
+            
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                    
+                      <h6 class="card-title text-uppercase text-muted mb-2">
+                        Toggle 1
+                      </h6>
+                      <div class="custom-control custom-checkbox-toggle">
+                        <input type="checkbox" class="custom-control-input" id="cardToggle01">
+                        <label class="custom-control-label" for="cardToggle01"></label>
+                      </div>
+  
+                    </div>
+                    <div class="col-3">
+                      
+                      <h6 class="card-title text-uppercase text-muted mb-2">
+                        Toggle 2
+                      </h6>
+                      <div class="custom-control custom-checkbox-toggle">
+                        <input type="checkbox" class="custom-control-input" id="cardToggle02">
+                        <label class="custom-control-label" for="cardToggle02"></label>
+                      </div>
+    
+                    </div>
+                    <div class="col-3">
+                      
+                      <h6 class="card-title text-uppercase text-muted mb-2">
+                        Toggle 3
+                      </h6>
+                      <div class="custom-control custom-checkbox-toggle">
+                        <input type="checkbox" class="custom-control-input" id="cardToggle03">
+                        <label class="custom-control-label" for="cardToggle03"></label>
+                      </div>
+  
+                    </div>
+                    <div class="col-3">
+                      
+                      <h6 class="card-title text-uppercase text-muted mb-2">
+                        Toggle 4
+                      </h6>
+                      <div class="custom-control custom-checkbox-toggle">
+                        <input type="checkbox" class="custom-control-input" id="cardToggle04">
+                        <label class="custom-control-label" for="cardToggle04"></label>
+                      </div>
+    
+                    </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-12 col-xl">
+            
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Toggle 1
+                    </h6>
+                    <div class="custom-control custom-checkbox-toggle">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle">
+                      <label class="custom-control-label" for="cardToggle"></label>
+                    </div>
+
+                  </div>
+                  <div class="col-3">
+                    
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Toggle 2
+                    </h6>
+                    <div class="custom-control custom-checkbox-toggle">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle2">
+                      <label class="custom-control-label" for="cardToggle2"></label>
+                    </div>
+  
+                  </div>
+                  <div class="col-3">
+                    
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Toggle 3
+                    </h6>
+                    <div class="custom-control custom-checkbox-toggle">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle3">
+                      <label class="custom-control-label" for="cardToggle3"></label>
+                    </div>
+
+                  </div>
+                  <div class="col-3">
+                    
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Toggle 4
+                    </h6>
+                    <div class="custom-control custom-checkbox-toggle">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle4">
+                      <label class="custom-control-label" for="cardToggle4"></label>
+                    </div>
+  
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+              
+          </div>
+        </div>
+
+
 
         <div class="row">
           <div class="col-12 col-xl-12">
@@ -2662,6 +2781,7 @@
 
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
+    <script src="stocks.js"></script>
 
   </body>
 </html>
